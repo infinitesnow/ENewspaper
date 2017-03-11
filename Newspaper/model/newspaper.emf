@@ -5,11 +5,13 @@ package newspaper;
 class Newspaper {
   val Page[+] page;
   attr String[1] name;
+  val Advertisers[1] advertisers;
+  val Data[1] data;
 }
 
 @gmf.node(label="pageNumber", label.pattern="Page {0}")
 class Page {
-  ref Topic[*] topic;
+  ref Topic topic;
   derived id attr int[1] pageNumber;
 
   @gmf.compartment
@@ -58,9 +60,9 @@ class Metadata {
   attr String author;
   attr EDate date;
   ref Topic[1] topic;
-  val Location[*] location;
-  val Tag[*] tag;
-  val Mention[*] person;
+  ref Mention[*] mention;
+  ref Location location;
+  ref Tag[*] tag;
 }
 
 @gmf.node(label="ID", label.pattern="Article area {0}")
@@ -130,5 +132,25 @@ class Tag {
 class Mention {
   attr String[1] name;
   attr String[1] surname;
+}
+
+@gmf.node(label.placement="none")
+class Advertisers {
+  @gmf.compartment
+  val ContactPerson[*] contactPerson;
+  @gmf.compartment
+  val Brand[*] brand;
+}
+
+@gmf.node(label.placement="none")
+class Data {
+  @gmf.compartment
+  val Topic[+] topic;
+  @gmf.compartment
+  val Mention[*] mention;
+  @gmf.compartment
+  val Location[*] location;
+  @gmf.compartment
+  val Tag[*] tag;
 }
 

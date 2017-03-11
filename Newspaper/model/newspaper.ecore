@@ -6,9 +6,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="page" lowerBound="1" upperBound="-1"
         eType="#//Page" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="advertisers" eType="#//Advertisers"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="topic" eType="#//Topic"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="advertisers" lowerBound="1"
+        eType="#//Advertisers" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="data" lowerBound="1" eType="#//Data"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Page">
@@ -16,8 +16,7 @@
       <details key="label" value="pageNumber"/>
       <details key="label.pattern" value="Page {0}"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="topic" upperBound="-1"
-        eType="#//Topic"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="topic" eType="#//Topic"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pageNumber" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" derived="true"
         iD="true"/>
@@ -79,12 +78,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="author" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="topic" lowerBound="1" eType="#//Topic"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="location" upperBound="-1"
-        eType="#//Location" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tag" upperBound="-1" eType="#//Tag"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="person" upperBound="-1"
-        eType="#//Mention" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mention" upperBound="-1"
+        eType="#//Mention"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="location" eType="#//Location"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tag" upperBound="-1" eType="#//Tag"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ArticleArea" eSuperTypes="#//Area">
     <eAnnotations source="gmf.node">
@@ -181,9 +178,19 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Advertisers">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contactPerson" eType="#//ContactPerson"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="brand" eType="#//Brand"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contactPerson" upperBound="-1"
+        eType="#//ContactPerson" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="brand" upperBound="-1"
+        eType="#//Brand" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Data">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="topic" lowerBound="1" upperBound="-1"
+        eType="#//Topic" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mention" upperBound="-1"
+        eType="#//Mention" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="location" upperBound="-1"
+        eType="#//Location" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tag" upperBound="-1" eType="#//Tag"
         containment="true"/>
   </eClassifiers>
 </ecore:EPackage>
