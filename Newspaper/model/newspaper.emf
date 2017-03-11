@@ -11,6 +11,7 @@ class Newspaper {
 class Page {
   ref Topic[*] topic;
   derived id attr int[1] pageNumber;
+
   @gmf.compartment
   val Area[+] area;
 }
@@ -24,23 +25,30 @@ class Article {
   attr String[1] title;
   attr String subtitle;
   attr String[1] text;
-  ref Image[*] image;
+
   @gmf.compartment
   val Metadata[1] metadata;
+  @gmf.compartment
+  val Image image;
 }
 
 @gmf.node(label="title")
 class Ad {
+
+  attr String[1] title;
+  attr String subtitle;
+
+  derived attr float[1] cost;
+
   @gmf.link
   ref Brand[1] brand;
   @gmf.link
   ref ContactPerson[+] contactperson;
-  attr String[1] title;
-  attr String subtitle;
-  ref Image image;
-  derived attr float[1] cost;
+  
   @gmf.compartment
   val Metadata[1] metadata;
+  @gmf.compartment
+  val Image image;
 }
 
 @gmf.node(label="author")
@@ -58,6 +66,7 @@ class ArticleArea extends Area {
 
   @gmf.compartment
   val ArticleArea subArea;
+
   @gmf.compartment
   val Article[*] article;
   derived id attr int[1] ID;
@@ -68,6 +77,7 @@ class AdvertisingArea extends Area {
 
   @gmf.compartment
   val AdvertisingArea subArea;
+
   @gmf.compartment
   val Ad[*] ad;
   attr float[1] workingDayCost;
@@ -99,6 +109,7 @@ class Area {
 class Image {
   attr String caption;
   attr String[1] url;
+  attr ecore.EByteArray[1] image;
 }
 
 @gmf.node(label="name")
