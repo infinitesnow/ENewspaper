@@ -11,6 +11,7 @@ class Newspaper {
 
 @gmf.node(label="pageNumber", label.pattern="Page {0}")
 class Page {
+
   @gmf.link
   ref Topic topic;
   derived id attr int[1] pageNumber;
@@ -61,10 +62,13 @@ class Metadata {
   attr String author;
   attr EDate date;
   ref Topic[1] topic;
+
   @gmf.link
   ref Mention[*] mention;
+
   @gmf.link
   ref Location location;
+
   @gmf.link
   ref Tag[*] tag;
 }
@@ -73,10 +77,10 @@ class Metadata {
 class ArticleArea extends Area {
 
   @gmf.compartment
-  val ArticleArea subArea;
+  val ArticleArea[*] subArea;
 
   @gmf.compartment
-  val Article[*] article;
+  val Article article;
   derived id attr int[1] ID;
 }
 
@@ -84,10 +88,10 @@ class ArticleArea extends Area {
 class AdvertisingArea extends Area {
 
   @gmf.compartment
-  val AdvertisingArea subArea;
+  val AdvertisingArea[*] subArea;
 
   @gmf.compartment
-  val Ad[*] ad;
+  val Ad ad;
   attr float[1] workingDayCost;
   attr float[1] weekendCost;
   derived id attr int ID;
@@ -140,20 +144,26 @@ class Mention {
 
 @gmf.node(label.placement="none")
 class Advertisers {
+
   @gmf.compartment
   val ContactPerson[*] contactPerson;
+
   @gmf.compartment
   val Brand[*] brand;
 }
 
 @gmf.node(label.placement="none")
 class Data {
+
   @gmf.compartment
   val Topic[+] topic;
+
   @gmf.compartment
   val Mention[*] mention;
+
   @gmf.compartment
   val Location[*] location;
+
   @gmf.compartment
   val Tag[*] tag;
 }

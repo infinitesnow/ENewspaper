@@ -428,7 +428,7 @@
     </children>
     <styles xmi:type="notation:FontStyle" xmi:id="_o8PBoQY4EeeREvI535X9DQ" fontName="Sans"/>
     <element xmi:type="ecore:EReference" href="newspaper.ecore#//Ad/metadata"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_o8PBogY4EeeREvI535X9DQ" points="[-66, 49, 196, -145]$[-253, 189, 9, -5]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_o8PBogY4EeeREvI535X9DQ" points="[-46, 49, 216, -145]$[-131, 141, 131, -53]$[-253, 190, 9, -4]"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_o8SsAAY4EeeREvI535X9DQ" id="(0.9296875,0.15853658536585366)"/>
   </edges>
   <edges xmi:type="notation:Connector" xmi:id="_VHxjMAY5EeeREvI535X9DQ" type="4004" source="_0KOrhgY1EeeREvI535X9DQ" target="_0KP5lgY1EeeREvI535X9DQ">

@@ -96,8 +96,8 @@
       <details key="label" value="ID"/>
       <details key="label.pattern" value="Article area {0}"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="subArea" eType="#//ArticleArea"
-        containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subArea" upperBound="-1"
+        eType="#//ArticleArea" containment="true">
       <eAnnotations source="gmf.compartment"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="article" eType="#//Article"
@@ -112,8 +112,8 @@
       <details key="label" value="ID"/>
       <details key="label.pattern" value="Ad area {0}"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="subArea" eType="#//AdvertisingArea"
-        containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subArea" upperBound="-1"
+        eType="#//AdvertisingArea" containment="true">
       <eAnnotations source="gmf.compartment"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ad" eType="#//Ad" containment="true">
