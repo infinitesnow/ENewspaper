@@ -16,6 +16,7 @@ class Page {
   val Area[+] area;
 }
 
+@gmf.node(label="name")
 class Topic {
   attr String name;
 }
@@ -28,6 +29,7 @@ class Article {
 
   @gmf.compartment
   val Metadata[1] metadata;
+
   @gmf.compartment
   val Image image;
 }
@@ -35,18 +37,18 @@ class Article {
 @gmf.node(label="title")
 class Ad {
 
-  attr String[1] title;
-  attr String subtitle;
-
-  derived attr float[1] cost;
-
   @gmf.link
   ref Brand[1] brand;
+
   @gmf.link
   ref ContactPerson[+] contactperson;
-  
+  attr String[1] title;
+  attr String subtitle;
+  derived attr float[1] cost;
+
   @gmf.compartment
   val Metadata[1] metadata;
+
   @gmf.compartment
   val Image image;
 }
@@ -98,7 +100,7 @@ class ContactPerson {
   attr long[1] phone;
 }
 
-class Area {
+abstract class Area {
   attr int[1] xTopLeft;
   attr int[1] yTopLeft;
   attr int[1] xBottomRight;
@@ -106,6 +108,7 @@ class Area {
   derived attr int[1] sizeInPage;
 }
 
+@gmf.node(label="caption")
 class Image {
   attr String caption;
   attr String[1] url;
@@ -118,6 +121,7 @@ class Location {
   attr String coordinates;
 }
 
+@gmf.node(label="text")
 class Tag {
   attr String text;
 }

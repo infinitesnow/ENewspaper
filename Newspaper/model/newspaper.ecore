@@ -6,6 +6,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="page" lowerBound="1" upperBound="-1"
         eType="#//Page" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="advertisers" eType="#//Advertisers"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="topic" eType="#//Topic"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Page">
     <eAnnotations source="gmf.node">
@@ -23,6 +27,9 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Topic">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Article">
@@ -37,7 +44,9 @@
       <eAnnotations source="gmf.compartment"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="image" eType="#//Image"
-        containment="true"/>
+        containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Ad">
     <eAnnotations source="gmf.node">
@@ -59,7 +68,9 @@
       <eAnnotations source="gmf.compartment"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="image" eType="#//Image"
-        containment="true"/>
+        containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Metadata">
     <eAnnotations source="gmf.node">
@@ -128,7 +139,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="phone" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Area">
+  <eClassifiers xsi:type="ecore:EClass" name="Area" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="xTopLeft" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="yTopLeft" lowerBound="1"
@@ -141,6 +152,9 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Image">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="caption"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="caption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="image" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByteArray"/>
@@ -153,6 +167,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="coordinates" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tag">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="text"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Mention">
@@ -162,5 +179,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="surname" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Advertisers">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contactPerson" eType="#//ContactPerson"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="brand" eType="#//Brand"
+        containment="true"/>
   </eClassifiers>
 </ecore:EPackage>
