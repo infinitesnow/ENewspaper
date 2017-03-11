@@ -1,0 +1,8 @@
+Newspaper.*/
+.metadata/
+Newspaper/bin/
+Newspaper/src/
+Newspaper/model/*
+!Newspaper/model/*.emf
+!Newspaper/model/*.ecore
+!Newspaper/model/*.ecore_diagram

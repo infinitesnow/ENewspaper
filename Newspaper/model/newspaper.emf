@@ -1,0 +1,119 @@
+@namespace(uri="http://www.newspaper.org", prefix="newspaper")
+package newspaper;
+
+@gmf.diagram
+class Newspaper {
+  val Page[+] page;
+  attr String[1] name;
+}
+
+@gmf.node(label="pageNumber", label.pattern="Page {0}")
+class Page {
+  ref Topic[*] topic;
+  derived id attr int[1] pageNumber;
+  @gmf.compartment
+  val Area[+] area;
+}
+
+class Topic {
+  attr String name;
+}
+
+@gmf.node(label="title")
+class Article {
+  attr String[1] title;
+  attr String subtitle;
+  attr String[1] text;
+  ref Image[*] image;
+  @gmf.compartment
+  val Metadata[1] metadata;
+}
+
+@gmf.node(label="title")
+class Ad {
+  @gmf.link
+  ref Brand[1] brand;
+  @gmf.link
+  ref ContactPerson[+] contactperson;
+  attr String[1] title;
+  attr String subtitle;
+  ref Image image;
+  derived attr float[1] cost;
+  @gmf.compartment
+  val Metadata[1] metadata;
+}
+
+@gmf.node(label="author")
+class Metadata {
+  attr String author;
+  attr EDate date;
+  ref Topic[1] topic;
+  val Location[*] location;
+  val Tag[*] tag;
+  val Mention[*] person;
+}
+
+@gmf.node(label="ID", label.pattern="Article area {0}")
+class ArticleArea extends Area {
+
+  @gmf.compartment
+  val ArticleArea subArea;
+  @gmf.compartment
+  val Article[*] article;
+  derived id attr int[1] ID;
+}
+
+@gmf.node(label="ID", label.pattern="Ad area {0}")
+class AdvertisingArea extends Area {
+
+  @gmf.compartment
+  val AdvertisingArea subArea;
+  @gmf.compartment
+  val Ad[*] ad;
+  attr float[1] workingDayCost;
+  attr float[1] weekendCost;
+  derived id attr int ID;
+}
+
+@gmf.node(label="name")
+class Brand {
+  id attr String[1] name;
+}
+
+@gmf.node(label="name,surname")
+class ContactPerson {
+  attr String[1] name;
+  attr String[1] surname;
+  attr String[1] email;
+  attr long[1] phone;
+}
+
+class Area {
+  attr int[1] xTopLeft;
+  attr int[1] yTopLeft;
+  attr int[1] xBottomRight;
+  attr int[1] yBottomRight;
+  derived attr int[1] sizeInPage;
+}
+
+class Image {
+  attr String caption;
+  attr String[1] url;
+}
+
+@gmf.node(label="name")
+class Location {
+  attr String[1] name;
+  attr String coordinates;
+}
+
+class Tag {
+  attr String text;
+}
+
+@gmf.node(label="name,surname")
+class Mention {
+  attr String[1] name;
+  attr String[1] surname;
+}
+
