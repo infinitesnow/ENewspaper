@@ -16,7 +16,9 @@
       <details key="label" value="pageNumber"/>
       <details key="label.pattern" value="Page {0}"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="topic" eType="#//Topic"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="topic" eType="#//Topic">
+      <eAnnotations source="gmf.link"/>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pageNumber" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" derived="true"
         iD="true"/>
@@ -73,15 +75,21 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Metadata">
     <eAnnotations source="gmf.node">
-      <details key="label" value="author"/>
+      <details key="label.placement" value="none"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="author" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="topic" lowerBound="1" eType="#//Topic"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="mention" upperBound="-1"
-        eType="#//Mention"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="location" eType="#//Location"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tag" upperBound="-1" eType="#//Tag"/>
+        eType="#//Mention">
+      <eAnnotations source="gmf.link"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="location" eType="#//Location">
+      <eAnnotations source="gmf.link"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tag" upperBound="-1" eType="#//Tag">
+      <eAnnotations source="gmf.link"/>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ArticleArea" eSuperTypes="#//Area">
     <eAnnotations source="gmf.node">
@@ -178,19 +186,37 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Advertisers">
+    <eAnnotations source="gmf.node">
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contactPerson" upperBound="-1"
-        eType="#//ContactPerson" containment="true"/>
+        eType="#//ContactPerson" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="brand" upperBound="-1"
-        eType="#//Brand" containment="true"/>
+        eType="#//Brand" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Data">
+    <eAnnotations source="gmf.node">
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="topic" lowerBound="1" upperBound="-1"
-        eType="#//Topic" containment="true"/>
+        eType="#//Topic" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="mention" upperBound="-1"
-        eType="#//Mention" containment="true"/>
+        eType="#//Mention" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="location" upperBound="-1"
-        eType="#//Location" containment="true"/>
+        eType="#//Location" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tag" upperBound="-1" eType="#//Tag"
-        containment="true"/>
+        containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
   </eClassifiers>
 </ecore:EPackage>
