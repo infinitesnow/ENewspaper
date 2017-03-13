@@ -6,3 +6,4 @@ Newspaper/model/*
 !Newspaper/model/*.emf
 !Newspaper/model/*.ecore
 !Newspaper/model/*.ecore_diagram
+!Newspaper/model/*.evl
