@@ -1,1 +1,47 @@
-../../runtime-EclipseApplication/Newspaper/default.newspaper
+<?xml version="1.0" encoding="UTF-8"?>
+<newspaper:Newspaper xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:newspaper="http://www.newspaper.org">
+  <page topic="//@data/@topic.0">
+    <area xsi:type="newspaper:ArticleArea">
+      <subArea>
+        <article>
+          <metadata mention="//@data/@mention.0" location="//@data/@location.0" tag="//@data/@tag.2"/>
+        </article>
+      </subArea>
+      <subArea>
+        <article>
+          <metadata mention="//@data/@mention.1" location="//@data/@location.0" tag="//@data/@tag.3"/>
+        </article>
+      </subArea>
+    </area>
+  </page>
+  <page topic="//@data/@topic.1" pageNumber="1">
+    <area xsi:type="newspaper:AdvertisingArea">
+      <ad brand="Nike" contactperson="//@advertisers/@contactPerson.0" title="New Air Jordan!">
+        <metadata/>
+      </ad>
+    </area>
+    <area xsi:type="newspaper:ArticleArea">
+      <subArea>
+        <article>
+          <metadata tag="//@data/@tag.0 //@data/@tag.1"/>
+          <image caption="Funny cat"/>
+        </article>
+      </subArea>
+    </area>
+  </page>
+  <advertisers>
+    <contactPerson name="Michael" surname="Jordan"/>
+    <brand name="Nike"/>
+  </advertisers>
+  <data>
+    <topic name="Politics"/>
+    <topic name="Lifestyle"/>
+    <mention name="Donald" surname="Trump"/>
+    <mention name="Bernie" surname="Sanders"/>
+    <location name="USA"/>
+    <tag text="#swag"/>
+    <tag text="#yolo"/>
+    <tag text="#strumpthetrump"/>
+    <tag text="#feelthebern"/>
+  </data>
+</newspaper:Newspaper>
