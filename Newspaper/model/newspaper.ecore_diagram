@@ -206,10 +206,6 @@
         <element xmi:type="ecore:EAttribute" href="newspaper.ecore#//Image/caption"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_AJ3-MQY_Eee5arI35HqVHQ"/>
       </children>
-      <children xmi:type="notation:Node" xmi:id="_AJ3-MgY_Eee5arI35HqVHQ" type="3001">
-        <element xmi:type="ecore:EAttribute" href="newspaper.ecore#//Image/url"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_AJ3-MwY_Eee5arI35HqVHQ"/>
-      </children>
       <children xmi:type="notation:Node" xmi:id="_djx3cAY_Eee5arI35HqVHQ" type="3001">
         <element xmi:type="ecore:EAttribute" href="newspaper.ecore#//Image/image"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_djx3cQY_Eee5arI35HqVHQ"/>

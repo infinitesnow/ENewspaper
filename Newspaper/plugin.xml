@@ -17,7 +17,7 @@
       <constraintsBinding
             compose="true"
             constraints="model/constraints.evl"
-            namespaceURI="http://newspaper.org">
+            namespaceURI="http://www.newspaper.org">
       </constraintsBinding>
    </extension>
    <extension

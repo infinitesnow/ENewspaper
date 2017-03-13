@@ -1,10 +1,12 @@
-context newspaper!ArticleArea {
-	
-	constraint AreaOrArticle{
-	
-		check : self.subArea -> select(article|article.isOclTypeOf(Article)) -> size <> 0 implies self.subArea -> select(subArea|subArea.isOclTypeOf(ArticleArea)) -> size = 0
+context ArticleArea {
+
+	constraint test{
+		check: self.ID <>0
+		message: "test"
+	} 
 		
-		message: "Must be either an article or areas" 
-	
+	constraint areaOrArticle{
+		check : self.subArea.select(article|article.type = Article ).size() <> 0 implies self.subArea.select(subArea|subArea.type = ArticleArea ).size() = 0
+		message: "Must be either an article or areas" 	
 	}
 }
