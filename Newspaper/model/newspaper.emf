@@ -14,7 +14,7 @@ class Page {
 
   @gmf.link
   ref Topic topic;
-  derived id attr int[1] pageNumber;
+  derived attr int[1] pageNumber;
 
   @gmf.compartment
   val Area[+] area;
@@ -25,9 +25,9 @@ class Topic {
   attr String name;
 }
 
-@gmf.node(label="title")
+@gmf.node(label="articleTitle")
 class Article {
-  attr String[1] title;
+  attr String[1] articleTitle;
   attr String subtitle;
   attr String[1] text;
 
@@ -38,7 +38,7 @@ class Article {
   val Image image;
 }
 
-@gmf.node(label="title")
+@gmf.node(label="adTitle")
 class Ad {
 
   @gmf.link
@@ -46,7 +46,7 @@ class Ad {
 
   @gmf.link
   ref ContactPerson[+] contactperson;
-  attr String[1] title;
+  attr String[1] adTitle;
   attr String subtitle;
   derived attr float[1] cost;
 
@@ -81,7 +81,6 @@ class ArticleArea extends Area {
 
   @gmf.compartment
   val Article article;
-  derived id attr int[1] ID;
 }
 
 @gmf.node(label="ID", label.pattern="Ad area {0}")
@@ -94,7 +93,6 @@ class AdvertisingArea extends Area {
   val Ad ad;
   attr float[1] workingDayCost;
   attr float[1] weekendCost;
-  derived id attr int ID;
 }
 
 @gmf.node(label="name")
@@ -116,6 +114,7 @@ abstract class Area {
   attr int[1] xBottomRight;
   attr int[1] yBottomRight;
   derived attr int[1] sizeInPage;
+  derived attr int ID;
 }
 
 @gmf.node(label="caption")
