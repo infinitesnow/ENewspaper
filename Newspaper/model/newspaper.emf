@@ -11,7 +11,10 @@ class Newspaper {
 
 @gmf.node(label="pageNumber", label.pattern="Page {0}")
 class Page {
+<<<<<<< HEAD
 
+=======
+>>>>>>> feeda25efbbd7915cf882366e747d03456c47c49
   @gmf.link
   ref Topic topic;
   derived id attr int[1] pageNumber;
@@ -62,6 +65,7 @@ class Metadata {
   attr String author;
   attr EDate date;
   ref Topic[1] topic;
+<<<<<<< HEAD
 
   @gmf.link
   ref Mention[*] mention;
@@ -69,6 +73,12 @@ class Metadata {
   @gmf.link
   ref Location location;
 
+=======
+  @gmf.link
+  ref Mention[*] mention;
+  @gmf.link
+  ref Location location;
+>>>>>>> feeda25efbbd7915cf882366e747d03456c47c49
   @gmf.link
   ref Tag[*] tag;
 }
