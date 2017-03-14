@@ -108,13 +108,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="parentArea" eType="#//ArticleArea"
         eOpposite="#//ArticleArea/subArea"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AdvertisingArea" eSuperTypes="#//Area">
+  <eClassifiers xsi:type="ecore:EClass" name="AdArea" eSuperTypes="#//Area">
     <eAnnotations source="gmf.node">
       <details key="label" value="ID"/>
       <details key="label.pattern" value="Ad area {0}"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="subArea" upperBound="-1"
-        eType="#//AdvertisingArea" containment="true">
+        eType="#//AdArea" containment="true">
       <eAnnotations source="gmf.compartment"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ad" eType="#//Ad" containment="true">
@@ -144,15 +144,15 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Area" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="xTopLeft" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="yTopLeft" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="xBottomRight" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="yBottomRight" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" derived="true"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
         derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
