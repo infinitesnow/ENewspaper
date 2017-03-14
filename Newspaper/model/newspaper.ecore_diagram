@@ -54,10 +54,6 @@
   <children xmi:type="notation:Shape" xmi:id="_0KNdaAY1EeeREvI535X9DQ" type="2001" fontName="Sans">
     <children xmi:type="notation:DecorationNode" xmi:id="_0KNdagY1EeeREvI535X9DQ" type="5001"/>
     <children xmi:type="notation:BasicCompartment" xmi:id="_0KOEYAY1EeeREvI535X9DQ" type="7001">
-      <children xmi:type="notation:Node" xmi:id="_AIs5gAY_Eee5arI35HqVHQ" type="3001">
-        <element xmi:type="ecore:EAttribute" href="newspaper.ecore#//Article/title"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_AIs5gQY_Eee5arI35HqVHQ"/>
-      </children>
       <children xmi:type="notation:Node" xmi:id="_AIs5ggY_Eee5arI35HqVHQ" type="3001">
         <element xmi:type="ecore:EAttribute" href="newspaper.ecore#//Article/subtitle"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_AIs5gwY_Eee5arI35HqVHQ"/>
@@ -636,5 +632,12 @@
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_gTNVUgZDEee5arI35HqVHQ" points="[-23, 15, 233, -949]$[-133, 90, 123, -874]$[-263, 460, -7, -504]$[-263, 942, -7, -22]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gTQYoAZDEee5arI35HqVHQ" id="(0.19008264462809918,0.6818181818181818)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gTQYoQZDEee5arI35HqVHQ" id="(0.1836734693877551,0.4230769230769231)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_M9SiIAi3EeeBWL26w6vhGw" type="4004" source="_0KNdUAY1EeeREvI535X9DQ" target="_0KP5lgY1EeeREvI535X9DQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_M9SiIQi3EeeBWL26w6vhGw" fontName="Sans"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_M9SiIgi3EeeBWL26w6vhGw" points="[6, -3, -320, 6]$[99, -43, -227, -34]$[232, -23, -94, -14]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_M9U-YAi3EeeBWL26w6vhGw" id="(0.863013698630137,0.045454545454545456)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_M9U-YQi3EeeBWL26w6vhGw" id="(0.9594594594594594,0.10071942446043165)"/>
   </edges>
 </notation:Diagram>

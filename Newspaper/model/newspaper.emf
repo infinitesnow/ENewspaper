@@ -10,7 +10,7 @@ class Newspaper {
 }
 
 @gmf.node(label="pageNumber", label.pattern="Page {0}")
-class Page {
+class Page extends Area {
 
   @gmf.link
   ref Topic topic;
@@ -77,10 +77,11 @@ class Metadata {
 class ArticleArea extends Area {
 
   @gmf.compartment
-  val ArticleArea[*] subArea;
+  val ArticleArea[*]#parentArea subArea;
 
   @gmf.compartment
   val Article article;
+  ref ArticleArea#subArea parentArea;
 }
 
 @gmf.node(label="ID", label.pattern="Ad area {0}")
