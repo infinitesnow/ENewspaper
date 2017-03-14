@@ -114,7 +114,8 @@ abstract class Area {
   attr int[1] yTopLeft;
   attr int[1] xBottomRight;
   attr int[1] yBottomRight;
-  derived attr int[1] sizeInPage;
+  derived attr int[1] height;
+  derived attr float[1] width;
   derived attr int ID;
 }
 
