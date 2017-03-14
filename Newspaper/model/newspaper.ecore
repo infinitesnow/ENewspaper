@@ -118,7 +118,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="subArea" upperBound="-1"
-        eType="#//AdArea" containment="true">
+        eType="#//AdArea" containment="true" eOpposite="#//AdArea/parentArea">
       <eAnnotations source="gmf.compartment"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ad" eType="#//Ad" containment="true">
@@ -128,6 +128,8 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="weekendCost" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parentArea" eType="#//AdArea"
+        eOpposite="#//AdArea/subArea"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Brand">
     <eAnnotations source="gmf.node">

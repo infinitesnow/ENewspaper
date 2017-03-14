@@ -1,3 +1,9 @@
+/*
+ *
+ An ArticleArea can be either a container for other areas, or a container for a single article.
+ *
+*/
+
 context ArticleArea {
 
         constraint areaOrArticle{
@@ -7,6 +13,8 @@ context ArticleArea {
                 Contains \"" + self.article.articleTitle + "\" and " + self.getSubAreasID()
         }
 }
+
+// Same for AdArea
 
 context AdArea {
 
@@ -18,21 +26,7 @@ context AdArea {
         }
 }
 
-context Area {
-		
-		constraint insideParentAreaTop{
-                guard : not self.isTypeOf(Page)
-                check : self.xTopLeft < self.parentArea.xTopLeft or self.yTopLeft > self.parentArea.yTopLeft
-                message : "ArticleArea " + self.ID + "exceeds parent area (Top)"
-        }
-
-        constraint insideParentAreaBottom{
-                guard : not self.isTypeOf(Page)
-                check : self.xBottomRight > self.parentArea.xBottomRight or self.yBottomRight < self.parentArea.yBottomRight
-                message : "ArticleArea " + self.ID + "exceeds parent area (Bottom)"
-        }
-
-}
+// Helper method
 
 operation Area getSubAreasID() : String {
         var ids = "";
@@ -40,4 +34,68 @@ operation Area getSubAreasID() : String {
                 ids = ids + "Area " + id + ", ";
         }
         return ids;
+}
+
+
+/*
+ *
+ An area cannot exceed the borders of its parent area
+ *
+*/
+
+context Area {
+		
+		constraint insideParentAreaLeft{
+                guard : not self.isTypeOf(Page)
+                check : self.xTopLeft >= self.getParentTopLeft("x")
+                message : "(Left) ArticleArea " + self.ID + " (xTopLeft=" + self.xTopLeft + 
+                ") exceeds parent area (xTopLeft=" + self.getParentTopLeft("x") + ") "
+        }
+        
+        constraint insideParentAreaTop{
+                guard : not self.isTypeOf(Page)
+                check : self.yTopLeft <= self.getParentTopLeft("y")
+                message : "(Top) ArticleArea " + self.ID + " (yTopLeft=" + self.yTopLeft + 
+                ") exceeds parent area (yTopLeft=" + self.getParentTopLeft("y") + ") "
+        }
+
+        constraint insideParentBottom{
+                guard : not self.isTypeOf(Page)
+                check : self.yBottomRight >= self.getParentBottomRight("y")
+                message : "(Bottom) ArticleArea " + self.ID + " (yTopLeft=" + self.yTopLeft + 
+                ") exceeds parent area (yTopLeft=" + self.getParentBottomRight("y") + ") "
+        }
+        
+        constraint insideParentAreaRight{
+                guard : not self.isTypeOf(Page)
+                check : self.xBottomRight <= self.getParentBottomRight("x")
+                message : "(Right) ArticleArea " + self.ID + " (xTopLeft=" + self.xTopLeft + 
+                ") exceeds parent area (xTopLeft=" + self.getParentBottomRight("x") + ") "
+        }
+
+}
+
+// Helper methods
+
+operation Area getParentTopLeft(c : String) : Real{
+		// If an area is a direct son of a page, the parent relation has a different name (page)
+		if (self.parentArea.isUndefined()){
+			if ( c = "x" ) { return self.page.xTopLeft; }
+			else { if ( c = "y" ) { return self.page.yTopLeft;} }
+		}
+		else {
+			if ( c = "x" ) { return self.parentArea.xTopLeft; }
+			else { if ( c = "y" ) { return self.parentArea.yTopLeft; } }
+		}
+}
+
+operation Area getParentBottomRight(c : String) : Real{
+		if (self.parentArea.isUndefined()) {
+			if ( c = "x" ) return self.page.xBottomRight;
+			else { if ( c = "y" ) { return self.page.yBottomRight; } }
+		}
+		else {
+			if ( c = "x" ) { return self.parentArea.xBottomRight; }
+			else { if ( c = "y" ) { return self.parentArea.yBottomRight;} }
+		}
 }

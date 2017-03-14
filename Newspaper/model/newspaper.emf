@@ -17,7 +17,7 @@ class Page extends Area {
   derived attr int[1] pageNumber;
 
   @gmf.compartment
-  val Area[+] area;
+  val Area[+]#page area;
 }
 
 @gmf.node(label="name")
@@ -90,12 +90,13 @@ class AdArea extends Area {
   derived attr int ID;
 
   @gmf.compartment
-  val AdArea[*] subArea;
+  val AdArea[*]#parentArea subArea;
 
   @gmf.compartment
   val Ad ad;
   attr float[1] workingDayCost;
   attr float[1] weekendCost;
+  ref AdArea#subArea parentArea;
 }
 
 @gmf.node(label="name")
@@ -118,6 +119,7 @@ abstract class Area {
   attr float[1] yBottomRight;
   derived attr float[1] height;
   derived attr float[1] width;
+  ref Page#area page;
 }
 
 @gmf.node(label="caption")
