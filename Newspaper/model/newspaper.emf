@@ -75,6 +75,7 @@ class Metadata {
 
 @gmf.node(label="ID", label.pattern="Article area {0}")
 class ArticleArea extends Area {
+  derived attr int ID;
 
   @gmf.compartment
   val ArticleArea[*]#parentArea subArea;
@@ -86,6 +87,7 @@ class ArticleArea extends Area {
 
 @gmf.node(label="ID", label.pattern="Ad area {0}")
 class AdArea extends Area {
+  derived attr int ID;
 
   @gmf.compartment
   val AdArea[*] subArea;
@@ -116,7 +118,6 @@ abstract class Area {
   attr float[1] yBottomRight;
   derived attr float[1] height;
   derived attr float[1] width;
-  derived attr int ID;
 }
 
 @gmf.node(label="caption")

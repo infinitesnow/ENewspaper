@@ -21,13 +21,13 @@ context AdArea {
 context Area {
 		
 		constraint insideParentAreaTop{
-                guard : self.type <> Page
+                guard : not self.isTypeOf(Page)
                 check : self.xTopLeft < self.parentArea.xTopLeft or self.yTopLeft > self.parentArea.yTopLeft
                 message : "ArticleArea " + self.ID + "exceeds parent area (Top)"
         }
 
         constraint insideParentAreaBottom{
-                guard : self.type <> Page
+                guard : not self.isTypeOf(Page)
                 check : self.xBottomRight > self.parentArea.xBottomRight or self.yBottomRight < self.parentArea.yBottomRight
                 message : "ArticleArea " + self.ID + "exceeds parent area (Bottom)"
         }

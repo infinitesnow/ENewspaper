@@ -127,23 +127,6 @@
     <element xmi:type="ecore:EClass" href="newspaper.ecore#//ArticleArea"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0KOrewY1EeeREvI535X9DQ" x="435" y="60"/>
   </children>
-  <children xmi:type="notation:Shape" xmi:id="_0KOrhgY1EeeREvI535X9DQ" type="2001" fontName="Sans">
-    <children xmi:type="notation:DecorationNode" xmi:id="_0KOriAY1EeeREvI535X9DQ" type="5001"/>
-    <children xmi:type="notation:BasicCompartment" xmi:id="_0KOriQY1EeeREvI535X9DQ" type="7001">
-      <styles xmi:type="notation:SortingStyle" xmi:id="_0KOrigY1EeeREvI535X9DQ"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_0KOriwY1EeeREvI535X9DQ"/>
-    </children>
-    <children xmi:type="notation:BasicCompartment" xmi:id="_0KOrjAY1EeeREvI535X9DQ" type="7002">
-      <styles xmi:type="notation:SortingStyle" xmi:id="_0KOrjQY1EeeREvI535X9DQ"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_0KOrjgY1EeeREvI535X9DQ"/>
-    </children>
-    <children xmi:type="notation:BasicCompartment" xmi:id="_0KPSgAY1EeeREvI535X9DQ" type="7003">
-      <styles xmi:type="notation:SortingStyle" xmi:id="_0KPSgQY1EeeREvI535X9DQ"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_0KPSggY1EeeREvI535X9DQ"/>
-    </children>
-    <element xmi:type="ecore:EClass" href="newspaper.ecore#//AdvertisingArea"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0KOrhwY1EeeREvI535X9DQ" x="880" y="20"/>
-  </children>
   <children xmi:type="notation:Shape" xmi:id="_0KPSgwY1EeeREvI535X9DQ" type="2001" fontName="Sans">
     <children xmi:type="notation:DecorationNode" xmi:id="_0KPShQY1EeeREvI535X9DQ" type="5001"/>
     <children xmi:type="notation:BasicCompartment" xmi:id="_0KPShgY1EeeREvI535X9DQ" type="7001">
@@ -385,19 +368,6 @@
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0M0sdAY1EeeREvI535X9DQ" id="(0.6666666666666666,1.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0M1TgAY1EeeREvI535X9DQ" id="(0.49624060150375937,0.0)"/>
   </edges>
-  <edges xmi:type="notation:Connector" xmi:id="_0MOPgAY1EeeREvI535X9DQ" type="4003" source="_0KOrhgY1EeeREvI535X9DQ" target="_0KOEaQY1EeeREvI535X9DQ">
-    <children xmi:type="notation:DecorationNode" xmi:id="_0MOPgwY1EeeREvI535X9DQ" type="6002">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_0MOPhAY1EeeREvI535X9DQ" x="-2" y="-7"/>
-    </children>
-    <children xmi:type="notation:DecorationNode" xmi:id="_0MOPhQY1EeeREvI535X9DQ" type="6004">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_0MOPhgY1EeeREvI535X9DQ" x="5" y="5"/>
-    </children>
-    <styles xmi:type="notation:FontStyle" xmi:id="_0MOPgQY1EeeREvI535X9DQ" fontName="Sans"/>
-    <element xmi:type="ecore:EReference" href="newspaper.ecore#//AdvertisingArea/ad"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0MOPggY1EeeREvI535X9DQ" points="[0, 0, -93, -60]$[93, 60, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0MzeUgY1EeeREvI535X9DQ" id="(0.664804469273743,1.0)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0MzeUwY1EeeREvI535X9DQ" id="(0.49624060150375937,0.0)"/>
-  </edges>
   <edges xmi:type="notation:Connector" xmi:id="_nCpCwAY4EeeREvI535X9DQ" type="4003" source="_0KNdaAY1EeeREvI535X9DQ" target="_0KOEdQY1EeeREvI535X9DQ">
     <children xmi:type="notation:DecorationNode" xmi:id="_nCpp0AY4EeeREvI535X9DQ" type="6002">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_nCpp0QY4EeeREvI535X9DQ" x="-22" y="10"/>
@@ -422,13 +392,6 @@
     <element xmi:type="ecore:EReference" href="newspaper.ecore#//Ad/metadata"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_o8PBogY4EeeREvI535X9DQ" points="[-46, 49, 216, -145]$[-131, 141, 131, -53]$[-253, 190, 9, -4]"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_o8SsAAY4EeeREvI535X9DQ" id="(0.9296875,0.15853658536585366)"/>
-  </edges>
-  <edges xmi:type="notation:Connector" xmi:id="_VHxjMAY5EeeREvI535X9DQ" type="4004" source="_0KOrhgY1EeeREvI535X9DQ" target="_0KP5lgY1EeeREvI535X9DQ">
-    <styles xmi:type="notation:FontStyle" xmi:id="_VHxjMQY5EeeREvI535X9DQ" fontName="Sans"/>
-    <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_VHxjMgY5EeeREvI535X9DQ" points="[-20, -8, 139, 51]$[-137, -51, 22, 8]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_VHyxUAY5EeeREvI535X9DQ" id="(0.11173184357541899,0.29591836734693877)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_VHyxUQY5EeeREvI535X9DQ" id="(0.8513513513513513,0.08130081300813008)"/>
   </edges>
   <edges xmi:type="notation:Connector" xmi:id="_YQEw4AY5EeeREvI535X9DQ" type="4004" source="_0KOregY1EeeREvI535X9DQ" target="_0KP5lgY1EeeREvI535X9DQ">
     <styles xmi:type="notation:FontStyle" xmi:id="_YQEw4QY5EeeREvI535X9DQ" fontName="Sans"/>
@@ -461,19 +424,6 @@
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_gDvhggY5EeeREvI535X9DQ" points="[-18, -7, -34, -23]$[-63, -22, -79, -38]$[-93, 12, -109, -4]$[-68, 53, -84, 37]$[-14, 29, -30, 13]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gDyk0AY5EeeREvI535X9DQ" id="(0.20689655172413793,0.5606060606060606)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gDyk0QY5EeeREvI535X9DQ" id="(0.39080459770114945,0.803030303030303)"/>
-  </edges>
-  <edges xmi:type="notation:Connector" xmi:id="_inJ5cAY5EeeREvI535X9DQ" type="4003" source="_0KOrhgY1EeeREvI535X9DQ" target="_0KOrhgY1EeeREvI535X9DQ">
-    <children xmi:type="notation:DecorationNode" xmi:id="_inKggAY5EeeREvI535X9DQ" type="6002">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_inKggQY5EeeREvI535X9DQ" y="40"/>
-    </children>
-    <children xmi:type="notation:DecorationNode" xmi:id="_inKgggY5EeeREvI535X9DQ" type="6004">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_inKggwY5EeeREvI535X9DQ" x="-26"/>
-    </children>
-    <styles xmi:type="notation:FontStyle" xmi:id="_inJ5cQY5EeeREvI535X9DQ" fontName="Sans"/>
-    <element xmi:type="ecore:EReference" href="newspaper.ecore#//AdvertisingArea/subArea"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_inJ5cgY5EeeREvI535X9DQ" points="[-28, -10, -28, -10]$[-83, -29, -83, -29]$[-123, 31, -123, 31]$[-53, 91, -53, 91]$[-26, 44, -26, 44]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_inM8wAY5EeeREvI535X9DQ" id="(0.1564245810055866,0.5510204081632653)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_inNj0AY5EeeREvI535X9DQ" id="(0.1564245810055866,0.5510204081632653)"/>
   </edges>
   <edges xmi:type="notation:Connector" xmi:id="_C2ijUAZAEee5arI35HqVHQ" type="4003" source="_0KNdaAY1EeeREvI535X9DQ" target="_0KP5ogY1EeeREvI535X9DQ">
     <children xmi:type="notation:DecorationNode" xmi:id="_C2jxcAZAEee5arI35HqVHQ" type="6002">
