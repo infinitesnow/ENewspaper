@@ -10,14 +10,14 @@ class Newspaper {
 }
 
 @gmf.node(label="pageNumber", label.pattern="Page {0}")
-class Page {
+class Page extends Area {
 
   @gmf.link
   ref Topic topic;
   derived attr int[1] pageNumber;
 
   @gmf.compartment
-  val Area[+] area;
+  val Area[+]#page area;
 }
 
 @gmf.node(label="name")
@@ -75,24 +75,28 @@ class Metadata {
 
 @gmf.node(label="ID", label.pattern="Article area {0}")
 class ArticleArea extends Area {
+  derived attr int ID;
 
   @gmf.compartment
-  val ArticleArea[*] subArea;
+  val ArticleArea[*]#parentArea subArea;
 
   @gmf.compartment
   val Article article;
+  ref ArticleArea#subArea parentArea;
 }
 
 @gmf.node(label="ID", label.pattern="Ad area {0}")
-class AdvertisingArea extends Area {
+class AdArea extends Area {
+  derived attr int ID;
 
   @gmf.compartment
-  val AdvertisingArea[*] subArea;
+  val AdArea[*]#parentArea subArea;
 
   @gmf.compartment
   val Ad ad;
   attr float[1] workingDayCost;
   attr float[1] weekendCost;
+  ref AdArea#subArea parentArea;
 }
 
 @gmf.node(label="name")
@@ -109,12 +113,13 @@ class ContactPerson {
 }
 
 abstract class Area {
-  attr int[1] xTopLeft;
-  attr int[1] yTopLeft;
-  attr int[1] xBottomRight;
-  attr int[1] yBottomRight;
-  derived attr int[1] sizeInPage;
-  derived attr int ID;
+  attr float[1] xTopLeft;
+  attr float[1] yTopLeft;
+  attr float[1] xBottomRight;
+  attr float[1] yBottomRight;
+  derived attr float[1] height;
+  derived attr float[1] width;
+  ref Page#area page;
 }
 
 @gmf.node(label="caption")

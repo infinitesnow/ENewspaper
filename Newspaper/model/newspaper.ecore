@@ -21,8 +21,10 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pageNumber" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" derived="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pageArea" lowerBound="1"
-        upperBound="-1" eType="#//PageArea" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="area" lowerBound="1" upperBound="-1"
+        eType="#//Area" containment="true" eOpposite="#//Area/page">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Topic">
     <eAnnotations source="gmf.node">
@@ -90,29 +92,44 @@
       <eAnnotations source="gmf.link"/>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ArticleArea" eSuperTypes="#//PageArea">
+  <eClassifiers xsi:type="ecore:EClass" name="ArticleArea" eSuperTypes="#//Area">
     <eAnnotations source="gmf.node">
       <details key="label" value="ID"/>
       <details key="label.pattern" value="Article area {0}"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="article" lowerBound="1"
-        eType="#//Article" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subArea" upperBound="-1"
+        eType="#//ArticleArea" containment="true" eOpposite="#//ArticleArea/parentArea">
       <eAnnotations source="gmf.compartment"/>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="article" eType="#//Article"
+        containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parentArea" eType="#//ArticleArea"
+        eOpposite="#//ArticleArea/subArea"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AdvertisingArea" eSuperTypes="#//PageArea">
+  <eClassifiers xsi:type="ecore:EClass" name="AdArea" eSuperTypes="#//Area">
     <eAnnotations source="gmf.node">
       <details key="label" value="ID"/>
       <details key="label.pattern" value="Ad area {0}"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ad" lowerBound="1" eType="#//Ad"
-        containment="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subArea" upperBound="-1"
+        eType="#//AdArea" containment="true" eOpposite="#//AdArea/parentArea">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ad" eType="#//Ad" containment="true">
       <eAnnotations source="gmf.compartment"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="workingDayCost" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="weekendCost" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parentArea" eType="#//AdArea"
+        eOpposite="#//AdArea/subArea"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Brand">
     <eAnnotations source="gmf.node">
@@ -133,17 +150,18 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Area" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="xTopLeft" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="yTopLeft" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="xBottomRight" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="yBottomRight" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sizeInPage" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" derived="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
         derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="page" eType="#//Page" eOpposite="#//Page/area"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Image">
     <eAnnotations source="gmf.node">
@@ -207,11 +225,5 @@
         containment="true">
       <eAnnotations source="gmf.compartment"/>
     </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PageArea" eSuperTypes="#//Area">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="subArea" lowerBound="1"
-        upperBound="-1" eType="#//PageArea" containment="true" eOpposite="#//PageArea/parentArea"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parentArea" eType="#//PageArea"
-        eOpposite="#//PageArea/subArea"/>
   </eClassifiers>
 </ecore:EPackage>

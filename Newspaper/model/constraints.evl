@@ -1,29 +1,145 @@
+/*
+ *
+ An ArticleArea can be either a container for other areas, or a container for a single article.
+ *
+ */
+
 context ArticleArea {
 
-	constraint areaOrArticle{
-	
-		check : self.article.isDefined() implies self.subArea.isEmpty()
-		message: "ArticleArea " + self.ID + " must contain either an article or an area. 
-		Contains \"" + self.article.articleTitle + "\" and " + self.getSubAreasID()
+        constraint areaOrArticle{
+
+                check : self.article.isDefined() implies self.subArea.isEmpty()
+                message: "ArticleArea " + self.ID + " must contain either an article or an area.
+                Contains \"" + self.article.articleTitle + "\" and " + self.getSubAreasID()
+        }
+}
+
+// Same for AdArea
+
+context AdArea {
+
+        constraint areaOrAd{
+
+                check : self.ad.isDefined() implies self.subArea.isEmpty()
+                message: "AdvertisingArea " + self.ID + " must contain either an article or an area.
+                Contains \"" + self.ad.adTitle + "\" and " + self.getSubAreasID()
+        }
+}
+
+// Helper method
+
+operation Area getSubAreasID() : String {
+        var ids = "";
+        for (id : Integer in self.subArea.ID){
+                ids = ids + "Area " + id + ", ";
+        }
+        return ids;
+}
+
+
+/*
+ *
+ An area cannot exceed the borders of its parent area
+ *
+ */
+
+context Area {
+		
+		constraint insideParentAreaLeft{
+                guard : not self.isTypeOf(Page)
+                check : self.xTopLeft >= self.getParentTopLeft("x")
+                message : "(Left) ArticleArea " + self.ID + " (xTopLeft=" + self.xTopLeft + 
+                ") exceeds parent area (xTopLeft=" + self.getParentTopLeft("x") + ") "
+        }
+        
+        constraint insideParentAreaTop{
+                guard : not self.isTypeOf(Page)
+                check : self.yTopLeft <= self.getParentTopLeft("y")
+                message : "(Top) ArticleArea " + self.ID + " (yTopLeft=" + self.yTopLeft + 
+                ") exceeds parent area (yTopLeft=" + self.getParentTopLeft("y") + ") "
+        }
+
+        constraint insideParentBottom{
+                guard : not self.isTypeOf(Page)
+                check : self.yBottomRight >= self.getParentBottomRight("y")
+                message : "(Bottom) ArticleArea " + self.ID + " (yTopLeft=" + self.yTopLeft + 
+                ") exceeds parent area (yTopLeft=" + self.getParentBottomRight("y") + ") "
+        }
+        
+        constraint insideParentAreaRight{
+                guard : not self.isTypeOf(Page)
+                check : self.xBottomRight <= self.getParentBottomRight("x")
+                message : "(Right) ArticleArea " + self.ID + " (xTopLeft=" + self.xTopLeft + 
+                ") exceeds parent area (xTopLeft=" + self.getParentBottomRight("x") + ") "
+        }
+
+}
+
+// Helper methods
+
+operation Area getParent() : Area {
+		// If an area is a direct son of a page, the parent relation has a different name (page)
+		if (self.parentArea.isUndefined()) {
+			return self.page;
+		}
+		else { return self.parentArea; }
+}
+
+operation Area getParentTopLeft(c : String) : Real{
+		if ( c = "x" ) { return self.getParent().xTopLeft; }
+		else { if ( c = "y" ) { return self.getParent().yTopLeft; } }
+}
+
+operation Area getParentBottomRight(c : String) : Real{
+		if ( c = "x" ) { return self.getParent().xBottomRight; }
+		else { if ( c = "y" ) { return self.getParent().yBottomRight;} }
+}
+
+/*
+ *
+ TopLeft must be top/left of BottomRight
+ *
+ */
+ 
+context Area {
+	constraint noSwap {
+		check : self.xTopLeft < self.xBottomRight and self.yTopLeft > self.yBottomRight
+		message : "Area " + self.ID + " is invalid. TopLeft and BottomRight are swapped."
 	}
-	
-	constraint insideParentAreaTop{
-		guard : self.parentArea.isDefined()
-		check : self.xTopLeft < self.parentArea.xTopLeft or self.yTopLeft > self.parent.yTopLeft
-		message : "ArticleArea " + self.ID + "exceeds parent area (Top)"
+
+} 
+
+/* 
+ *
+ Areas cannot overlap
+ *
+ */
+ 
+ context Area {
+ 	guard : not self.isTypeOf(Page)
+ 	constraint noOverlap {
+ 		check : self.overlapping() = ""
+ 		message : self.overlapping()
+ 	}
+ }
+ 
+operation Area getSiblings() : Set {
+	if ( self.parentArea.isUndefined() ) { 
+		return self.page.area; 
 	}
-	
-	constraint insideParentAreaBottom{
-		guard : self.parentArea.isDefined()
-		check : self.xBottomRight > self.parentArea.xBottomRight or self.yBottomRight < self.parent.yBottomRight
-		message : "ArticleArea " + self.ID + "exceeds parent area (Top)"
+	else { 
+		return self.parentArea.subArea; 
 	}
 }
 
-operation ArticleArea getSubAreasID() : String {
-	var ids = "";
-	for (id : Integer in self.subArea.ID){
-		ids = ids + "ArticleArea " + id + ", ";
+operation Area overlapping() : String {
+	for ( sibling : Area in self.getSiblings().excluding(self) ) {
+		if ( 
+		( sibling.xTopLeft < self.xBottomRight and not ( sibling.xBottomRight < self.xTopLeft ) ) and
+		( sibling.yTopLeft > self.yBottomRight and not ( sibling.yBottomRight > self.yTopLeft ) ) 
+		) { 
+			return "Area " + self.ID + " overlaps with Area " + sibling.ID; 
+		}
 	}
-	return ids;
+	return "";
 }
