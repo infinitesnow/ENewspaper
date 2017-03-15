@@ -7,3 +7,4 @@ Newspaper/model/*
 !Newspaper/model/*.ecore
 !Newspaper/model/*.ecore_diagram
 !Newspaper/model/*.evl
+!Newspaper.generator/src/Newspaper/generator/common/generate.mtl

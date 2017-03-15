@@ -1,0 +1,22 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.newspaper.org')]
+
+
+[template public generateElement(aNewspaper : Newspaper)]
+[comment @main /]
+[file ('/index.html',false,'UTF-8')]
+
+<html>
+
+<head>
+	<title>[aNewspaper.name /]</title>
+</head>
+
+<body>
+	<h1>[aNewspaper.name /]</h1>
+</body
+
+</html>
+
+[/file]
+[/template]
