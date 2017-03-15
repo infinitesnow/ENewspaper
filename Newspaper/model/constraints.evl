@@ -166,3 +166,29 @@ operation Area overlapping() : String {
  operation Page getAllChildrenTopicNames() : Any {
  	return self.getAllAreas().collect( a : ArticleArea | a.article).includingAll(self.getAllAreas().collect( a : AdArea | a.ad)).select( o : Any | o.isDefined()).metadata.topic.name;
  }
+ 
+/*
+ *
+ IDs must be consecutive
+ *
+ */
+context Newspaper {
+	
+	constraint pageNumbers{
+		check : self.page.notEmpty() implies ( self.consecutive() and self.different() )
+		message : "Page numbers must be consecutive: " + self.consecutive() + " and different: " + self.different() + ". Pages: " + self.page.pageNumber
+	}
+}
+
+operation Newspaper consecutive() : Boolean {
+	var pages = self.page.excluding( self.getLastPage() );
+	return pages.forAll( p : Page | self.page.pageNumber.includes(p.pageNumber+1));
+}
+
+operation Newspaper getLastPage() : Page {
+	return self.page.select( p : Page | p.pageNumber = self.page.pageNumber.max() ).first();
+}
+
+operation Newspaper different() : Boolean {
+	return self.page.forAll( p1 : Page | self.page.excluding(p1).forAll( p2 : Page | p2.pageNumber <> p1.pageNumber ) );
+}

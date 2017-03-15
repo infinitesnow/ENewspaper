@@ -288,6 +288,23 @@
     <element xmi:type="ecore:EClass" href="newspaper.ecore#//Data"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PNWnoQZDEee5arI35HqVHQ" x="88" y="697"/>
   </children>
+  <children xmi:type="notation:Shape" xmi:id="_izaywAl5EeepvZg580mzQg" type="2001" fontName="Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_izaywgl5EeepvZg580mzQg" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_izaywwl5EeepvZg580mzQg" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_izayxAl5EeepvZg580mzQg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_izayxQl5EeepvZg580mzQg"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_izayxgl5EeepvZg580mzQg" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_izayxwl5EeepvZg580mzQg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_izayyAl5EeepvZg580mzQg"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_izayyQl5EeepvZg580mzQg" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_izayygl5EeepvZg580mzQg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_izayywl5EeepvZg580mzQg"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="newspaper.ecore#//AdArea"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_izaywQl5EeepvZg580mzQg" x="690"/>
+  </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_0AZaAQY1EeeREvI535X9DQ"/>
   <element xmi:type="ecore:EPackage" href="newspaper.ecore#/"/>
   <edges xmi:type="notation:Connector" xmi:id="_0LiTAAY1EeeREvI535X9DQ" type="4003" source="_0KMPMAY1EeeREvI535X9DQ" target="_0KNdUAY1EeeREvI535X9DQ">

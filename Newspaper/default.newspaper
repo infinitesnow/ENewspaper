@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <newspaper:Newspaper xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:newspaper="http://www.newspaper.org" name="WeeklyMail">
-  <page yTopLeft="60.0" xBottomRight="30.0" topic="//@data/@topic.0" pageNumber="1">
+  <page yTopLeft="60.0" xBottomRight="30.0" pageNumber="1" topic="//@data/@topic.0">
     <area xsi:type="newspaper:ArticleArea" xTopLeft="1.0" yTopLeft="59.0" xBottomRight="29.0" yBottomRight="1.0" ID="1">
       <subArea xTopLeft="2.0" yTopLeft="58.0" xBottomRight="14.0" yBottomRight="2.0" ID="2">
         <subArea ID="3">
@@ -19,7 +19,7 @@
       </subArea>
     </area>
   </page>
-  <page yTopLeft="60.0" xBottomRight="30.0" topic="//@data/@topic.1" pageNumber="2">
+  <page yTopLeft="60.0" xBottomRight="30.0" pageNumber="2" topic="//@data/@topic.1">
     <area xsi:type="newspaper:AdArea" xTopLeft="1.0" yTopLeft="59.0" xBottomRight="14.0" yBottomRight="1.0" ID="1">
       <ad brand="Nike" contactperson="//@advertisers/@contactPerson.0" adTitle="New Air Jordan!">
         <metadata topic="//@data/@topic.1"/>
@@ -33,6 +33,9 @@
         </article>
       </subArea>
     </area>
+  </page>
+  <page yTopLeft="60.0" xBottomRight="30.0" pageNumber="4" topic="//@data/@topic.1">
+    <area xsi:type="newspaper:ArticleArea" yTopLeft="59.0" xBottomRight="29.0"/>
   </page>
   <advertisers>
     <contactPerson name="Michael" surname="Jordan" email="michealjordan@nba.com"/>
