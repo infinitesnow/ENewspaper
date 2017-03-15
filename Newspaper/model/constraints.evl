@@ -21,8 +21,7 @@ context AdArea {
         constraint areaOrAd{
 
                 check : self.ad.isDefined() implies self.subArea.isEmpty()
-                message: "AdvertisingArea " + self.ID + " must contain either an article or an area.
-                Contains \"" + self.ad.adTitle + "\" and " + self.getSubAreasID()
+                message: "AdvertisingArea " + self.ID + " must contain either an article or an area. Contains \"" + self.ad.adTitle + "\" and " + self.getSubAreasID()
         }
 }
 
@@ -154,9 +153,9 @@ operation Area overlapping() : String {
  
  	constraint sameTopic {
  
- 		check : self.getAllChildrenTopicNames() = self.topic.name
- 		message : "All articles and advertisements must have the same topic as their parent page " + self.pageNumber + " Page topic is " + self.topic.name + " and children topics are " + self.getAllChildrenTopicNames()
-
+ 		check : self.getAllChildrenTopicNames().forAll( s : String | s = self.topic.name )
+ 		message : "All articles and advertisements must have the same topic as their parent page " + self.pageNumber + ". Page topic is " + self.topic.name + " and children topics are " + self.getAllChildrenTopicNames()
+ 		
  	}
  }
  

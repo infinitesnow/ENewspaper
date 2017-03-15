@@ -16,11 +16,11 @@
       <details key="label" value="pageNumber"/>
       <details key="label.pattern" value="Page {0}"/>
     </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pageNumber" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="topic" eType="#//Topic">
       <eAnnotations source="gmf.link"/>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pageNumber" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="area" lowerBound="1" upperBound="-1"
         eType="#//Area" containment="true" eOpposite="#//Area/page">
       <eAnnotations source="gmf.compartment"/>
@@ -97,7 +97,7 @@
       <details key="label" value="ID"/>
       <details key="label.pattern" value="Article area {0}"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="subArea" upperBound="-1"
         eType="#//ArticleArea" containment="true" eOpposite="#//ArticleArea/parentArea">
@@ -115,7 +115,7 @@
       <details key="label" value="ID"/>
       <details key="label.pattern" value="Ad area {0}"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="subArea" upperBound="-1"
         eType="#//AdArea" containment="true" eOpposite="#//AdArea/parentArea">
