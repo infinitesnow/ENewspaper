@@ -159,11 +159,11 @@ operation Area overlapping() : String {
  	}
  }
  
- operation Page getAllAreas() : Any {
+ operation Page getAllAreas() : Collection {
  	return self.area.includingAll(self.area.closure(area : Area | area.subArea ));
  }
  
- operation Page getAllChildrenTopicNames() : Any {
+ operation Page getAllChildrenTopicNames() : Collection {
  	return self.getAllAreas().collect( a : ArticleArea | a.article).includingAll(self.getAllAreas().collect( a : AdArea | a.ad)).select( o : Any | o.isDefined()).metadata.topic.name;
  }
  
@@ -192,3 +192,20 @@ operation Newspaper getLastPage() : Page {
 operation Newspaper different() : Boolean {
 	return self.page.forAll( p1 : Page | self.page.excluding(p1).forAll( p2 : Page | p2.pageNumber <> p1.pageNumber ) );
 }
+
+/*
+ *
+ Pages must have the same size and absolute placement
+ *
+ */
+ 
+ context Newspaper {
+ 	
+ 	constraint pagesSameSize{
+ 		check : self.page.xTopLeft.forAll( n : Real | n=0 ) 
+ 			and self.page.yBottomRight.forAll( n : Real | n=0 )
+ 			and self.page.yTopLeft.forAll( n1 : Real | self.page.yTopLeft.forAll( n2 : Real | n2=n1 ) )
+ 			and self.page.xBottomRight.forAll( n1 : Real | self.page.xBottomRight.forAll( n2 : Real | n2=n1 ) )
+ 		message: "All pages must have the same size and absolute placement"
+ 	}
+ }
