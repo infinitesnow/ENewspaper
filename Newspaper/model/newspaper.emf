@@ -117,8 +117,6 @@ abstract class Area {
   attr float[1] yTopLeft;
   attr float[1] xBottomRight;
   attr float[1] yBottomRight;
-  derived attr float[1] height;
-  derived attr float[1] width;
   ref Page#area page;
 }
 

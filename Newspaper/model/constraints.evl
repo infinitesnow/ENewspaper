@@ -143,3 +143,27 @@ operation Area overlapping() : String {
 	}
 	return "";
 }
+
+/*
+ *
+ All article in a page must have the same topic as the page
+ *
+ */
+ 
+ context Page {
+ 
+ 	constraint sameTopic {
+ 
+ 		check : self.getAllChildrenTopicNames() = self.topic.name
+ 		message : "All articles and advertisements must have the same topic as their parent page " + self.pageNumber + " Page topic is " + self.topic.name + " and children topics are " + self.getAllChildrenTopicNames()
+
+ 	}
+ }
+ 
+ operation Page getAllAreas() : Any {
+ 	return self.area.includingAll(self.area.closure(area : Area | area.subArea ));
+ }
+ 
+ operation Page getAllChildrenTopicNames() : Any {
+ 	return self.getAllAreas().collect( a : ArticleArea | a.article).includingAll(self.getAllAreas().collect( a : AdArea | a.ad)).select( o : Any | o.isDefined()).metadata.topic.name;
+ }
