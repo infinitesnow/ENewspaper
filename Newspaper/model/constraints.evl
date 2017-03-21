@@ -6,11 +6,10 @@
 
 context Area {
 
-        constraint areaOrArticle{
+        constraint notContainer{
 
-                check : Area.isTypeOf(ArticleArea) or Area.isTypeOf(AdArea) implies self.subArea.isUndefined()
-                message: "ArticleArea " + self.name + " must contain either an article or an area.
-                Contains \"" + self.article.articleTitle + "\" and " + self.getSubAreasNames()
+                check : ( self.isTypeOf(ArticleArea) or self.isTypeOf(AdArea) ) implies self.subArea.isEmpty()
+                message: "Area " + self.name + " is of type " + self.type().name + ". It cannot contain other areas, but contains " + self.getSubAreasNames()
         }
 }
 
@@ -18,8 +17,8 @@ context Area {
 
 operation Area getSubAreasNames() : String {
         var names = "";
-        for (name : Integer in self.subArea.name){
-                names = names + "Area " + name + ", ";
+        for (area : Area in self.subArea){
+                names = names + "Area " + area.name + ", ";
         }
         return names;
 }
@@ -32,7 +31,7 @@ operation Area getSubAreasNames() : String {
 context Area
 {
 	constraint noSubPage{
-		check: not self.subArea.isTypeOf(Page)
+		check: self.subArea.forAll( a : Area | not a.isTypeOf(Page) )
 		message: "Area " + self.name + " cannot contain pages."
 	}
 }
@@ -110,8 +109,8 @@ context Area {
  context Area {
  	guard : not self.isTypeOf(Page)
  	constraint noOverlap {
- 		check : self.overlapping() = ""
- 		message : self.overlapping()
+ 		check : self.subArea.forAll( a : Area | not a.overlapping() )
+ 		message : "Children of Area " + self.name + " overlap."
  	}
  }
  
@@ -119,16 +118,16 @@ operation Area getSiblings() : Set {
 	return self.parentArea.subArea.excluding(self) ; 
 }
 
-operation Area overlapping() : String {
+operation Area overlapping() : Boolean {
 	for ( sibling : Area in self.getSiblings()) {
 		if ( 
 		( sibling.xTopLeft < self.xBottomRight and not ( sibling.xBottomRight < self.xTopLeft ) ) and
 		( sibling.yTopLeft > self.yBottomRight and not ( sibling.yBottomRight > self.yTopLeft ) ) 
 		) { 
-			return "Area " + self.name + " overlaps with Area " + sibling.name; 
+			return true; 
 		}
 	}
-	return "";
+	return false;
 }
 
 /*
