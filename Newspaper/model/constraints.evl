@@ -9,19 +9,19 @@ context Area {
         constraint areaOrArticle{
 
                 check : Area.isTypeOf(ArticleArea) or Area.isTypeOf(AdArea) implies self.subArea.isUndefined()
-                message: "ArticleArea " + self.ID + " must contain either an article or an area.
-                Contains \"" + self.article.articleTitle + "\" and " + self.getSubAreasID()
+                message: "ArticleArea " + self.name + " must contain either an article or an area.
+                Contains \"" + self.article.articleTitle + "\" and " + self.getSubAreasNames()
         }
 }
 
 // Helper method
 
-operation Area getSubAreasID() : String {
-        var ids = "";
-        for (id : Integer in self.subArea.ID){
-                ids = ids + "Area " + id + ", ";
+operation Area getSubAreasNames() : String {
+        var names = "";
+        for (name : Integer in self.subArea.name){
+                names = names + "Area " + name + ", ";
         }
-        return ids;
+        return names;
 }
 
 /*
@@ -48,28 +48,28 @@ context Area {
 		constraint insideParentAreaLeft{
                 guard : not self.isTypeOf(Page)
                 check : self.xTopLeft >= self.getParentTopLeft("x")
-                message : "(Left) ArticleArea " + self.ID + " (xTopLeft=" + self.xTopLeft + 
+                message : "(Left) ArticleArea " + self.name + " (xTopLeft=" + self.xTopLeft + 
                 ") exceeds parent area (xTopLeft=" + self.getParentTopLeft("x") + ") "
         }
         
         constraint insideParentAreaTop{
                 guard : not self.isTypeOf(Page)
                 check : self.yTopLeft <= self.getParentTopLeft("y")
-                message : "(Top) ArticleArea " + self.ID + " (yTopLeft=" + self.yTopLeft + 
+                message : "(Top) ArticleArea " + self.name + " (yTopLeft=" + self.yTopLeft + 
                 ") exceeds parent area (yTopLeft=" + self.getParentTopLeft("y") + ") "
         }
 
         constraint insideParentBottom{
                 guard : not self.isTypeOf(Page)
                 check : self.yBottomRight >= self.getParentBottomRight("y")
-                message : "(Bottom) ArticleArea " + self.ID + " (yTopLeft=" + self.yTopLeft + 
+                message : "(Bottom) ArticleArea " + self.name + " (yTopLeft=" + self.yTopLeft + 
                 ") exceeds parent area (yTopLeft=" + self.getParentBottomRight("y") + ") "
         }
         
         constraint insideParentAreaRight{
                 guard : not self.isTypeOf(Page)
                 check : self.xBottomRight <= self.getParentBottomRight("x")
-                message : "(Right) ArticleArea " + self.ID + " (xTopLeft=" + self.xTopLeft + 
+                message : "(Right) ArticleArea " + self.name + " (xTopLeft=" + self.xTopLeft + 
                 ") exceeds parent area (xTopLeft=" + self.getParentBottomRight("x") + ") "
         }
 
@@ -96,7 +96,7 @@ operation Area getParentBottomRight(c : String) : Real{
 context Area {
 	constraint noSwap {
 		check : self.xTopLeft < self.xBottomRight and self.yTopLeft > self.yBottomRight
-		message : "Area " + self.ID + " is invalid. TopLeft and BottomRight are swapped."
+		message : "Area " + self.name + " is invalid. TopLeft and BottomRight are swapped."
 	}
 
 } 
@@ -116,7 +116,7 @@ context Area {
  }
  
 operation Area getSiblings() : Set {
-	return self.parentArea.subArea.asSet().excluding(self) ; 
+	return self.parentArea.subArea.excluding(self) ; 
 }
 
 operation Area overlapping() : String {
@@ -125,7 +125,7 @@ operation Area overlapping() : String {
 		( sibling.xTopLeft < self.xBottomRight and not ( sibling.xBottomRight < self.xTopLeft ) ) and
 		( sibling.yTopLeft > self.yBottomRight and not ( sibling.yBottomRight > self.yTopLeft ) ) 
 		) { 
-			return "Area " + self.ID + " overlaps with Area " + sibling.ID; 
+			return "Area " + self.name + " overlaps with Area " + sibling.name; 
 		}
 	}
 	return "";
@@ -148,7 +148,7 @@ operation Area overlapping() : String {
  }
  
  operation Page getAllAreas() : Collection {
- 	return self.subArea.asSet().includingAll(self.subArea.closure(area : Area | area.subArea ));
+ 	return self.subArea.includingAll(self.subArea.closure(area : Area | area.subArea ));
  }
  
  operation Page getAllChildrenTopicNames() : Collection {

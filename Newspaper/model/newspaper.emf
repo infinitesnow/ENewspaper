@@ -108,7 +108,7 @@ class Area {
   attr String name;
 
   @gmf.compartment
-  val Area#parentArea subArea;
+  val Area[*]#parentArea subArea;
   ref Area#subArea parentArea;
 }
 
