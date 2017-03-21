@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<newspaper:Newspaper xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:newspaper="http://www.newspaper.org" name="WeeklyMail">
+<newspaper:Newspaper xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:newspaper="http://www.newspaper.org" name="Weekly Mail">
   <page yTopLeft="60.0" xBottomRight="30.0" pageNumber="1" topic="//@data/@topic.0">
     <subArea xTopLeft="1.0" yTopLeft="59.0" xBottomRight="29.0" yBottomRight="1.0" name="Container 1">
       <subArea xsi:type="newspaper:ArticleArea" xTopLeft="2.0" yTopLeft="58.0" xBottomRight="14.0" yBottomRight="2.0" name="Donald Trump">
@@ -14,7 +14,7 @@
         </article>
       </subArea>
       <subArea xsi:type="newspaper:ArticleArea" xTopLeft="13.0" yTopLeft="58.0" xBottomRight="28.0" yBottomRight="2.0" name="Bernie Sanders">
-        <article articleTitle="Bernie Sanders" subtitle="Is Bernie Sanders a commie?" text="Bernie Sanders saname something which might mean he's a commie">
+        <article articleTitle="Bernie Sanders" subtitle="Is Bernie Sanders a commie?" text="Bernie Sanders said something which might mean he's a commie">
           <metadata topic="//@data/@topic.0" mention="//@data/@mention.1" location="//@data/@location.0" tag="//@data/@tag.3"/>
         </article>
       </subArea>

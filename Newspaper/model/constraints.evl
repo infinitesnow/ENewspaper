@@ -98,6 +98,7 @@ context Area {
  */
  
  context Area {
+ 	// Pages do not overlap
  	guard : not self.isTypeOf(Page)
  	constraint noOverlap {
  		check : self.subArea.forAll( a : Area | not a.overlapping() )
