@@ -26,7 +26,7 @@
         <metadata topic="//@data/@topic.1"/>
       </ad>
     </subArea>
-    <subArea xsi:type="newspaper:Area" xTopLeft="15.0" yTopLeft="59.0" xBottomRight="29.0" yBottomRight="1.0" name="Lifestyle Container">
+    <subArea xTopLeft="15.0" yTopLeft="59.0" xBottomRight="29.0" yBottomRight="1.0" name="Lifestyle Container">
       <subArea xsi:type="newspaper:ArticleArea" xTopLeft="16.0" yTopLeft="58.0" xBottomRight="28.0" yBottomRight="2.0" name="6">
         <article articleTitle="You won't believe how funny these cats are!" subtitle="Number 5 made me LOL" text="Funny cats are funny">
           <metadata topic="//@data/@topic.1" tag="//@data/@tag.0 //@data/@tag.1"/>
@@ -36,7 +36,7 @@
     </subArea>
   </page>
   <page yTopLeft="60.0" xBottomRight="30.0" pageNumber="4" topic="//@data/@topic.1">
-    <subArea xsi:type="newspaper:ArticleArea" yTopLeft="59.0" xBottomRight="29.0"/>
+    <subArea xsi:type="newspaper:ArticleArea" yTopLeft="59.0" xBottomRight="29.0" name="Other Problematic Area"/>
   </page>
   <advertisers>
     <contactPerson name="Michael" surname="Jordan" email="michealjordan@nba.com"/>

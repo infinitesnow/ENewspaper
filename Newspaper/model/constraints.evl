@@ -43,35 +43,26 @@ context Area
  */
 
 context Area {
-		
-		constraint insideParentAreaLeft{
+
+		constraint insideParentArea{
                 guard : not self.isTypeOf(Page)
-                check : self.xTopLeft >= self.getParentTopLeft("x")
-                message : "(Left) ArticleArea " + self.name + " (xTopLeft=" + self.xTopLeft + 
-                ") exceeds parent area (xTopLeft=" + self.getParentTopLeft("x") + ") "
-        }
-        
-        constraint insideParentAreaTop{
-                guard : not self.isTypeOf(Page)
-                check : self.yTopLeft <= self.getParentTopLeft("y")
-                message : "(Top) ArticleArea " + self.name + " (yTopLeft=" + self.yTopLeft + 
-                ") exceeds parent area (yTopLeft=" + self.getParentTopLeft("y") + ") "
+                check : self.exceedsParentArea() = ""
+                message : "ArticleArea " + self.name + " exceeds parent area (" + self.exceedsParentArea() + ")"
         }
 
-        constraint insideParentBottom{
-                guard : not self.isTypeOf(Page)
-                check : self.yBottomRight >= self.getParentBottomRight("y")
-                message : "(Bottom) ArticleArea " + self.name + " (yTopLeft=" + self.yTopLeft + 
-                ") exceeds parent area (yTopLeft=" + self.getParentBottomRight("y") + ") "
-        }
-        
-        constraint insideParentAreaRight{
-                guard : not self.isTypeOf(Page)
-                check : self.xBottomRight <= self.getParentBottomRight("x")
-                message : "(Right) ArticleArea " + self.name + " (xTopLeft=" + self.xTopLeft + 
-                ") exceeds parent area (xTopLeft=" + self.getParentBottomRight("x") + ") "
-        }
+}
 
+operation Area exceedsParentArea() : String{
+	var insideLeft = self.xTopLeft >= self.getParentTopLeft("x");
+	var insideTop = self.yTopLeft <= self.getParentTopLeft("y");
+	var insideRight = self.yBottomRight >= self.getParentBottomRight("y");
+	var insideBottom = self.xBottomRight <= self.getParentBottomRight("x");
+	var exceeds = "";
+	if (not insideLeft) exceeds = exceeds + "left";
+	if (not insideTop) exceeds = exceeds + ", top";
+	if (not insideRight) exceeds = exceeds + ", right";
+	if (not insideBottom) exceeds = exceeds + ", bottom";
+	return exceeds;
 }
 
 // Helper methods

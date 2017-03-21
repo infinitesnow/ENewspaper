@@ -93,8 +93,8 @@
       <details key="label" value="name"/>
       <details key="label.pattern" value="Article area {0}"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="article" eType="#//Article"
-        containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="article" lowerBound="1"
+        eType="#//Article" containment="true">
       <eAnnotations source="gmf.compartment"/>
     </eStructuralFeatures>
   </eClassifiers>
@@ -103,7 +103,8 @@
       <details key="label" value="name"/>
       <details key="label.pattern" value="Ad area {0}"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ad" eType="#//Ad" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ad" lowerBound="1" eType="#//Ad"
+        containment="true">
       <eAnnotations source="gmf.compartment"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="workingDayCost" lowerBound="1"
