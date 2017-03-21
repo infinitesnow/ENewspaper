@@ -26,26 +26,18 @@
 
 [template public generatePage(p : Page)]
 <div height="[p.yTopLeft/]" width="[p.xBottomRight/]" sty>
-[for(aArea : Area | p.area ) ]
+[for(aArea : Area | p.subArea ) ]
 	[if (aArea.oclIsTypeOf(ArticleArea))]
-	[generateArticleArea(aArea)/]
+	[generateArea(aArea)/]
 	[/if]
 [/for]
 </div>
 [/template]
 
-[template public generateArticleArea(a : ArticleArea)]
+[template public generateArea(a : Area)]
 <div height="[a.yTopLeft/]" width="[a.xBottomRight/]" sty>
-[for(aSubArea : ArticleArea | a.subArea)]
-	[generateArticleArea(aSubArea)/]
-[/for]
-</div>
-[/template]
-
-[template public generateAdArea(a : AdArea)]
-<div height="[a.yTopLeft/]" width="[a.xBottomRight/]" sty>
-[for(aSubArea : AdArea | a.subArea)]
-	[generateAdArea(aSubArea)/]
+[for(aSubArea : Area | a.subArea)]
+	[generateArea(aSubArea)/]
 [/for]
 </div>
 [/template]

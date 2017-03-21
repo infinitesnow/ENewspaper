@@ -72,12 +72,14 @@ class Metadata {
 
 @gmf.node(label="name", label.pattern="Article area {0}")
 class ArticleArea extends Area {
+
   @gmf.compartment
   val Article article;
 }
 
 @gmf.node(label="name", label.pattern="Ad area {0}")
 class AdArea extends Area {
+
   @gmf.compartment
   val Ad ad;
   attr float[1] workingDayCost;
@@ -104,8 +106,10 @@ class Area {
   attr float[1] xBottomRight;
   attr float[1] yBottomRight;
   attr String name;
+
   @gmf.compartment
   val Area#parentArea subArea;
+  ref Area#subArea parentArea;
 }
 
 @gmf.node(label="caption")
