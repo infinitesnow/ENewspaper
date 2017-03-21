@@ -116,16 +116,11 @@ context Area {
  }
  
 operation Area getSiblings() : Set {
-	if ( self.parentArea.isUndefined() ) { 
-		return self.page.area; 
-	}
-	else { 
-		return self.parentArea.subArea; 
-	}
+	return self.parentArea.subArea.asSet().excluding(self) ; 
 }
 
 operation Area overlapping() : String {
-	for ( sibling : Area in self.getSiblings().excluding(self) ) {
+	for ( sibling : Area in self.getSiblings()) {
 		if ( 
 		( sibling.xTopLeft < self.xBottomRight and not ( sibling.xBottomRight < self.xTopLeft ) ) and
 		( sibling.yTopLeft > self.yBottomRight and not ( sibling.yBottomRight > self.yTopLeft ) ) 
@@ -153,7 +148,7 @@ operation Area overlapping() : String {
  }
  
  operation Page getAllAreas() : Collection {
- 	return self.area.includingAll(self.area.closure(area : Area | area.subArea ));
+ 	return self.subArea.asSet().includingAll(self.subArea.closure(area : Area | area.subArea ));
  }
  
  operation Page getAllChildrenTopicNames() : Collection {
