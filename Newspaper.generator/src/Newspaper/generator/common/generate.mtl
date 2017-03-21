@@ -2,7 +2,7 @@
 [module generate('http://www.newspaper.org')]
 
 
-[template public generateElement(aNewspaper : Newspaper)]
+[template public generateNewspaper(aNewspaper : Newspaper)]
 [comment @main /]
 [file ('/index.html',false,'UTF-8')]
 
@@ -14,9 +14,38 @@
 
 <body>
 	<h1>[aNewspaper.name /]</h1>
+[for( aPage : Page | aNewspaper.page)]
+	[generatePage(aPage)/]
+[/for]
 </body
 
 </html>
 
 [/file]
+[/template]
+
+[template public generatePage(p : Page)]
+<div height="[p.yTopLeft/]" width="[p.xBottomRight/]" sty>
+[for(aArea : Area | p.area ) ]
+	[if (aArea.oclIsTypeOf(ArticleArea))]
+	[generateArticleArea(aArea)/]
+	[/if]
+[/for]
+</div>
+[/template]
+
+[template public generateArticleArea(a : ArticleArea)]
+<div height="[a.yTopLeft/]" width="[a.xBottomRight/]" sty>
+[for(aSubArea : ArticleArea | a.subArea)]
+	[generateArticleArea(aSubArea)/]
+[/for]
+</div>
+[/template]
+
+[template public generateAdArea(a : AdArea)]
+<div height="[a.yTopLeft/]" width="[a.xBottomRight/]" sty>
+[for(aSubArea : AdArea | a.subArea)]
+	[generateAdArea(aSubArea)/]
+[/for]
+</div>
 [/template]

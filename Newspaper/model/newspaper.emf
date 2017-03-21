@@ -15,9 +15,6 @@ class Page extends Area {
 
   @gmf.link
   ref Topic topic;
-
-  @gmf.compartment
-  val Area[+]#page area;
 }
 
 @gmf.node(label="name")
@@ -75,28 +72,16 @@ class Metadata {
 
 @gmf.node(label="name", label.pattern="Article area {0}")
 class ArticleArea extends Area {
-  derived attr String name;
-
-  @gmf.compartment
-  val ArticleArea[*]#parentArea subArea;
-
   @gmf.compartment
   val Article article;
-  ref ArticleArea#subArea parentArea;
 }
 
 @gmf.node(label="name", label.pattern="Ad area {0}")
 class AdArea extends Area {
-  derived attr String name;
-
-  @gmf.compartment
-  val AdArea[*]#parentArea subArea;
-
   @gmf.compartment
   val Ad ad;
   attr float[1] workingDayCost;
   attr float[1] weekendCost;
-  ref AdArea#subArea parentArea;
 }
 
 @gmf.node(label="name")
@@ -112,12 +97,15 @@ class ContactPerson {
   attr long[1] phone;
 }
 
-abstract class Area {
+@gmf.node(label="name", label.pattern="Area {0}")
+class Area {
   attr float[1] xTopLeft;
   attr float[1] yTopLeft;
   attr float[1] xBottomRight;
   attr float[1] yBottomRight;
-  ref Page#area page;
+  attr String name;
+  @gmf.compartment
+  val Area#parentArea subArea;
 }
 
 @gmf.node(label="caption")
