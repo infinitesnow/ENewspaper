@@ -94,10 +94,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ArticleArea" eSuperTypes="#//Area">
     <eAnnotations source="gmf.node">
-      <details key="label" value="ID"/>
+      <details key="label" value="name"/>
       <details key="label.pattern" value="Article area {0}"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="subArea" upperBound="-1"
         eType="#//ArticleArea" containment="true" eOpposite="#//ArticleArea/parentArea">
@@ -112,10 +112,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AdArea" eSuperTypes="#//Area">
     <eAnnotations source="gmf.node">
-      <details key="label" value="ID"/>
+      <details key="label" value="name"/>
       <details key="label.pattern" value="Ad area {0}"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="subArea" upperBound="-1"
         eType="#//AdArea" containment="true" eOpposite="#//AdArea/parentArea">

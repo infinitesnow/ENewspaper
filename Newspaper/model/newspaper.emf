@@ -73,9 +73,9 @@ class Metadata {
   ref Tag[*] tag;
 }
 
-@gmf.node(label="ID", label.pattern="Article area {0}")
+@gmf.node(label="name", label.pattern="Article area {0}")
 class ArticleArea extends Area {
-  derived attr int[1] ID;
+  derived attr String name;
 
   @gmf.compartment
   val ArticleArea[*]#parentArea subArea;
@@ -85,9 +85,9 @@ class ArticleArea extends Area {
   ref ArticleArea#subArea parentArea;
 }
 
-@gmf.node(label="ID", label.pattern="Ad area {0}")
+@gmf.node(label="name", label.pattern="Ad area {0}")
 class AdArea extends Area {
-  derived attr int[1] ID;
+  derived attr String name;
 
   @gmf.compartment
   val AdArea[*]#parentArea subArea;

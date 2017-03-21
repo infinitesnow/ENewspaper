@@ -77,7 +77,7 @@ context Area {
 // Helper methods
 
 operation Area getParent() : Area {
-		// If an area is a direct son of a page, the parent relation has a different name (page)
+		// If an area is a direct child of a page, the parent relation has a different name (page)
 		if (self.parentArea.isUndefined()) {
 			return self.page;
 		}
@@ -169,7 +169,7 @@ operation Area overlapping() : String {
  
 /*
  *
- IDs must be consecutive
+ Page numbers must be consecutive and different
  *
  */
 context Newspaper {
