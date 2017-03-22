@@ -188,10 +188,10 @@ operation Newspaper different() : Boolean {
  	
  	constraint pagesSameSize{
  		check : self.page.xTopLeft.forAll( n : Real | n=0 ) 
- 			and self.page.yBottomRight.forAll( n : Real | n=0 )
- 			and self.page.yTopLeft.forAll( n1 : Real | self.page.yTopLeft.forAll( n2 : Real | n2=n1 ) )
+ 			and self.page.yTopLeft.forAll( n : Real | n=0 )
+ 			and self.page.yBottomRight.forAll( n1 : Real | self.page.yBottomRight.forAll( n2 : Real | n2=n1 ) )
  			and self.page.xBottomRight.forAll( n1 : Real | self.page.xBottomRight.forAll( n2 : Real | n2=n1 ) )
- 		message: "All pages must have the same size and absolute placement"
+ 		message: "All pages must have the same size and absolute placement. Positive axis are directed right and bottom."
  	}
  }
  

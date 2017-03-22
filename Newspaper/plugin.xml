@@ -26,6 +26,10 @@
             class="org.eclipse.epsilon.evl.emf.validation.EvlMarkerResolutionGenerator"
             markerType="org.eclipse.emf.ecore.diagnostic">
       </markerResolutionGenerator>
+      <markerResolutionGenerator
+            class="org.eclipse.epsilon.evl.emf.validation.EvlMarkerResolutionGenerator"
+            markerType="Newspaper.diagram.diagnostic">
+      </markerResolutionGenerator>
    </extension>
 
 </plugin>
