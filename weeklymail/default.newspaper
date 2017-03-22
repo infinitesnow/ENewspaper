@@ -3,17 +3,11 @@
   <page xBottomRight="30.0" yBottomRight="60.0" name="PoliticsPage" pageNumber="1" topic="//@data/@topic.0">
     <subArea xTopLeft="1.0" yTopLeft="1.0" xBottomRight="29.0" yBottomRight="59.0" name="Container1">
       <subArea xsi:type="newspaper:ArticleArea" xTopLeft="1.0" yTopLeft="1.0" xBottomRight="13.0" yBottomRight="57.0" name="DonaldTrump">
-        <subArea xsi:type="newspaper:ArticleArea" name="Problematic Area">
-          <subArea xsi:type="newspaper:Page" yTopLeft="60.0" xBottomRight="30.0" name="OtherProblematicPage" pageNumber="99"/>
-          <article articleTitle="This area has problems" subtitle="This area has problems" text="This area has problems">
-            <metadata topic="//@data/@topic.1"/>
-          </article>
-        </subArea>
         <article articleTitle="Donald Trump" subtitle="Donald Trump does something" text="Something Donald Trump has done">
           <metadata topic="//@data/@topic.0" mention="//@data/@mention.0" location="//@data/@location.0" tag="//@data/@tag.2"/>
         </article>
       </subArea>
-      <subArea xsi:type="newspaper:ArticleArea" xTopLeft="12.0" yTopLeft="1.0" xBottomRight="27.0" yBottomRight="57.0" name="BernieSanders">
+      <subArea xsi:type="newspaper:ArticleArea" xTopLeft="14.0" yTopLeft="1.0" xBottomRight="27.0" yBottomRight="57.0" name="BernieSanders">
         <article articleTitle="Bernie Sanders" subtitle="Is Bernie Sanders a commie?" text="Bernie Sanders said something which might mean he's a commie">
           <metadata topic="//@data/@topic.0" mention="//@data/@mention.1" location="//@data/@location.0" tag="//@data/@tag.3"/>
         </article>
@@ -34,9 +28,6 @@
         </article>
       </subArea>
     </subArea>
-  </page>
-  <page xBottomRight="30.0" yBottomRight="59.0" name="ProblematicPage" pageNumber="4" topic="//@data/@topic.1">
-    <subArea xsi:type="newspaper:ArticleArea" yTopLeft="59.0" xBottomRight="29.0" name="OtherProblematicArea"/>
   </page>
   <advertisers>
     <contactPerson name="Michael" surname="Jordan" email="michealjordan@nba.com"/>

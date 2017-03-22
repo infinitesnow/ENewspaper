@@ -205,13 +205,10 @@ operation Newspaper different() : Boolean {
  context Area {
  	
  	constraint noSpacesInName{
-	 	check : self.name.noSpaces()
+	 	check : not " ".isSubstringOf(self.name)
 	 	message : "Area " + self.name + " cannot contain spaces in its name."
  	}
  	
  }
- 
- operation String noSpaces() : Boolean{
- 	return not " ".isSubstringOf(self.name);
- }
+
  
