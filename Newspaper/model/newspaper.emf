@@ -105,7 +105,7 @@ class Area {
   attr float[1] yTopLeft;
   attr float[1] xBottomRight;
   attr float[1] yBottomRight;
-  attr String name;
+  attr String[1] name;
 
   @gmf.compartment
   val Area[*]#parentArea subArea;

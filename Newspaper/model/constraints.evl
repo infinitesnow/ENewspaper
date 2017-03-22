@@ -145,7 +145,7 @@ operation Area overlapping( set : Set ) : Boolean {
  }
  
  operation Page getAllAreas() : Collection {
- 	return self.subArea.includingAll(self.subArea.closure(area : Area | area.subArea ));
+ 	return self.closure(area : Area | area.subArea );
  }
  
  operation Page getAllChildrenTopicNames() : Collection {
@@ -194,3 +194,24 @@ operation Newspaper different() : Boolean {
  		message: "All pages must have the same size and absolute placement"
  	}
  }
+ 
+ /*
+  *
+  Names cannot contain spaces
+  *
+  *
+  */
+  
+ context Area {
+ 	
+ 	constraint noSpacesInName{
+	 	check : self.name.noSpaces()
+	 	message : "Area " + self.name + " cannot contain spaces in its name."
+ 	}
+ 	
+ }
+ 
+ operation String noSpaces() : Boolean{
+ 	return not " ".isSubstringOf(self.name);
+ }
+ 
