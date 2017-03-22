@@ -46,23 +46,10 @@ context Area {
 
 		constraint insideParentArea{
                 guard : not self.isTypeOf(Page)
-                check : self.exceedsParentArea() = ""
-                message : "ArticleArea " + self.name + " exceeds parent area (" + self.exceedsParentArea() + ")"
+                check : self.insideParent()
+                message : "ArticleArea " + self.name + " exceeds parent area (" + self.parentArea.name + ")"
         }
 
-}
-
-operation Area exceedsParentArea() : String{
-	var insideLeft = self.xTopLeft >= self.getParentTopLeft("x");
-	var insideTop = self.yTopLeft <= self.getParentTopLeft("y");
-	var insideRight = self.yBottomRight >= self.getParentBottomRight("y");
-	var insideBottom = self.xBottomRight <= self.getParentBottomRight("x");
-	var exceeds = "";
-	if (not insideLeft) exceeds = exceeds + "left";
-	if (not insideTop) exceeds = exceeds + ", top";
-	if (not insideRight) exceeds = exceeds + ", right";
-	if (not insideBottom) exceeds = exceeds + ", bottom";
-	return exceeds;
 }
 
 // Helper methods
@@ -77,6 +64,25 @@ operation Area getParentBottomRight(c : String) : Real{
 		else { if ( c = "y" ) { return self.parentArea.yBottomRight;} }
 }
 
+operation Area getHeight() : Real {
+		return self.yBottomRight-self.yTopLeft;
+}
+
+operation Area getWidth() : Real {
+		return self.xBottomRight-self.xTopLeft;
+}
+
+operation Area insideParent() : Boolean{
+		if ( 
+		     ( self.xTopLeft < 0 or self.yTopLeft < 0 ) 
+		     or 
+		     ( ( self.yTopLeft + self.getHeight() ) > self.parentArea.getHeight() 
+		       or ( self.xTopLeft + self.getWidth() ) > self.parentArea.getWidth() ) 
+		)  { return false; }
+		else { return true; }
+}
+
+
 /*
  *
  TopLeft must be top/left of BottomRight
@@ -85,7 +91,7 @@ operation Area getParentBottomRight(c : String) : Real{
  
 context Area {
 	constraint noSwap {
-		check : self.xTopLeft < self.xBottomRight and self.yTopLeft > self.yBottomRight
+		check : self.xTopLeft < self.xBottomRight and self.yTopLeft < self.yBottomRight
 		message : "Area " + self.name + " is invalid. TopLeft and BottomRight are swapped."
 	}
 
@@ -101,7 +107,7 @@ context Area {
  	// Pages do not overlap
  	guard : not self.isTypeOf(Page)
  	constraint noOverlap {
- 		check : self.subArea.forAll( a : Area | not a.overlapping() )
+ 		check : self.subArea.forAll( a : Area | not a.overlapping(a.getSiblings()) )
  		message : "Children of Area " + self.name + " overlap."
  	}
  }
@@ -110,11 +116,11 @@ operation Area getSiblings() : Set {
 	return self.parentArea.subArea.excluding(self) ; 
 }
 
-operation Area overlapping() : Boolean {
-	for ( sibling : Area in self.getSiblings()) {
+operation Area overlapping( set : Set ) : Boolean {
+	for ( a : Area in set) {
 		if ( 
-		( sibling.xTopLeft < self.xBottomRight and not ( sibling.xBottomRight < self.xTopLeft ) ) and
-		( sibling.yTopLeft > self.yBottomRight and not ( sibling.yBottomRight > self.yTopLeft ) ) 
+		( a.xTopLeft < self.xBottomRight and not ( a.xBottomRight < self.xTopLeft ) ) and
+		( a.yTopLeft > self.yBottomRight and not ( a.yBottomRight > self.yTopLeft ) ) 
 		) { 
 			return true; 
 		}

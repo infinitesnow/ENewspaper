@@ -30,8 +30,8 @@
 	margin-top:100pt; 
 	border-style:solid; 
 	border-width: 1pt; 
-	height:[aNewspaper.page.yTopLeft.floor()/]cm; 
-	width:[aNewspaper.page.xBottomRight.floor()/]cm; 
+	height:[aNewspaper.page.yTopLeft.floor()->any(true)/]cm; 
+	width:[aNewspaper.page.xBottomRight.floor()->any(true)/]cm; 
 	padding:3cm
 }
 [/file]
