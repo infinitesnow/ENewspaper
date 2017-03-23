@@ -1,10 +1,6 @@
-Newspaper.*/
 .metadata/
-Newspaper/bin/
-Newspaper/src/
-Newspaper/model/*
-!Newspaper/model/*.emf
-!Newspaper/model/*.ecore
-!Newspaper/model/*.ecore_diagram
-!Newspaper/model/*.evl
-!Newspaper.generator/src/Newspaper/generator/common/generate.mtl
+Newspaper.generated/*
+Newspaper.edit/*
+Newspaper.editor/*
+Newspaper.tests/*
+Newspaper.diagram/*
