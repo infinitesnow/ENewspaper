@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<newspaper:Newspaper xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:newspaper="http://www.newspaper.org" name="Actuality">
+  <page xBottomRight="30.0" yBottomRight="60.0" name="ActualityPage" pageNumber="1" topic="//@data/@topic.0">
+    <subArea xTopLeft="1.0" yTopLeft="1.0" xBottomRight="29.0" yBottomRight="29.0" name="Container1">
+      <subArea xsi:type="newspaper:ArticleArea" xTopLeft="1.0" yTopLeft="1.0" xBottomRight="27.0" yBottomRight="27.0" name="Cinema">
+        <article articleTitle="Casey Affleck Won the Oscar" subtitle="He won the best actor award" text="Casey Affleck won the oscar with Manchester by the see. &lt;br/>&lt;br/> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sollicitudin gravida tortor id varius. Proin eget metus massa. Phasellus a eros at risus faucibus viverra. Nullam sollicitudin augue risus, dignissim consequat erat rutrum vitae. Aliquam et tempus eros. Duis eleifend velit et ornare cursus. Morbi ut pretium eros, nec blandit turpis. Suspendisse pellentesque augue tortor, nec pretium mi blandit in. Sed laoreet sem ligula, in suscipit diam sagittis vitae. Ut convallis mi et ullamcorper pulvinar. Fusce blandit, odio eu accumsan vehicula, erat sem pharetra diam, sed suscipit magna diam vitae erat. Nulla lacinia, sapien sed sodales condimentum, lorem elit luctus urna, nec varius velit lectus et erat. Ut ipsum tellus, elementum ac dui vitae, convallis porttitor arcu. Morbi feugiat id lorem ac posuere. Ut vitae tortor massa. Donec fermentum enim quis arcu interdum euismod.&#xA;&#xA;Etiam tristique nisl vel nisi semper facilisis. Cras ac ante interdum, efficitur metus sit amet, tincidunt leo. Aenean pulvinar non metus quis convallis. Etiam mi nulla, hendrerit rutrum orci egestas, interdum imperdiet sem. Duis venenatis turpis quis quam rhoncus ultrices. Nunc eu lacus maximus, viverra lorem in, auctor quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam pharetra mauris non tortor venenatis, semper eleifend nulla eleifend. Sed aliquam quis dui eget auctor. Integer tempus eget nisi posuere imperdiet.&#xA;&#xA;Aliquam metus tellus, pretium sed ante ut, pellentesque tristique ligula. Donec efficitur leo sit amet tempor faucibus. Aliquam dignissim dolor varius, aliquet arcu nec, dictum augue. In non auctor leo, ut molestie libero. Mauris egestas tristique justo eleifend auctor. Cras aliquam quam varius imperdiet porta. Sed tincidunt porta convallis.">
+          <metadata topic="//@data/@topic.0" mention="//@data/@mention.0" location="//@data/@location.0" tag="//@data/@tag.0"/>
+        </article>
+      </subArea>
+    </subArea>
+    <subArea xsi:type="newspaper:AdArea" xTopLeft="1.0" yTopLeft="31.0" xBottomRight="29.0" yBottomRight="59.0" name="PromoCinema">
+      <ad brand="LuckyRed" contactperson="//@advertisers/@contactPerson.0" adTitle="Elle" subtitle="Elle is OUT!">
+        <metadata topic="//@data/@topic.0"/>
+      </ad>
+    </subArea>
+  </page>
+  <page xBottomRight="30.0" yBottomRight="60.0" name="HoroscopePage" pageNumber="2" topic="//@data/@topic.1">
+    <subArea xTopLeft="1.0" yTopLeft="1.0" xBottomRight="29.0" yBottomRight="59.0" name="Container2">
+      <subArea xsi:type="newspaper:ArticleArea" xTopLeft="1.0" yTopLeft="1.0" xBottomRight="13.0" yBottomRight="57.0" name="Cancer">
+        <article articleTitle="Cancer is your Year!" subtitle="Love Money and Work" text="Cancer will be your year">
+          <metadata topic="//@data/@topic.1" mention="//@data/@mention.1" tag="//@data/@tag.1"/>
+        </article>
+      </subArea>
+      <subArea xsi:type="newspaper:ArticleArea" xTopLeft="15.0" yTopLeft="1.0" xBottomRight="27.0" yBottomRight="57.0" name="Virgo">
+        <article articleTitle="Virgos in Love" subtitle="A men is waiting for you!" text="Virgos will found a boyfriend this year">
+          <metadata topic="//@data/@topic.1" mention="//@data/@mention.1" tag="//@data/@tag.2"/>
+        </article>
+      </subArea>
+    </subArea>
+  </page>
+  <advertisers>
+    <contactPerson name="Paul" surname="Verhoeven" email="paulverhoeven@gmail.com" phone="12345678"/>
+    <brand name="LuckyRed"/>
+  </advertisers>
+  <data>
+    <topic name="Actuality"/>
+    <topic name="Horoscope"/>
+    <mention name="Casey" surname="Affleck"/>
+    <mention name="Susan" surname="Miller"/>
+    <location name="Los Angeles"/>
+    <tag text="#ManchesterByTheSee"/>
+    <tag text="#Cancer"/>
+    <tag text="#Virgo"/>
+  </data>
+</newspaper:Newspaper>

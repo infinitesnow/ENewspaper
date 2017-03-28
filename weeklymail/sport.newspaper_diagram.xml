@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:newspaper="http://www.newspaper.org" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_ASakABCkEee-S93KWpRPRg" type="Newspaper" name="sport.newspaper_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_48m-oBCkEee-S93KWpRPRg" type="2001" fontName=".SF NS Text">
+    <children xmi:type="notation:DecorationNode" xmi:id="_48nlsBCkEee-S93KWpRPRg" type="5009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_48nlsRCkEee-S93KWpRPRg" type="7001">
+      <children xmi:type="notation:Shape" xmi:id="_aZI_0BClEee-S93KWpRPRg" type="3004" fontName=".SF NS Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_aZI_0xClEee-S93KWpRPRg" type="5001"/>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_aZI_1BClEee-S93KWpRPRg" type="7007">
+          <children xmi:type="notation:Shape" xmi:id="_gK1RoBClEee-S93KWpRPRg" type="3002" fontName=".SF NS Text">
+            <children xmi:type="notation:DecorationNode" xmi:id="_gK1RoxClEee-S93KWpRPRg" type="5007"/>
+            <children xmi:type="notation:BasicCompartment" xmi:id="_gK1RpBClEee-S93KWpRPRg" type="7003"/>
+            <children xmi:type="notation:BasicCompartment" xmi:id="_gK14sBClEee-S93KWpRPRg" type="7004">
+              <children xmi:type="notation:Shape" xmi:id="_rtsQ0BClEee-S93KWpRPRg" type="3008" fontName=".SF NS Text">
+                <children xmi:type="notation:DecorationNode" xmi:id="_rts34BClEee-S93KWpRPRg" type="5006"/>
+                <children xmi:type="notation:BasicCompartment" xmi:id="_rts34RClEee-S93KWpRPRg" type="7010">
+                  <children xmi:type="notation:Shape" xmi:id="_enaPsBCoEee-S93KWpRPRg" type="3009" fontName=".SF NS Text">
+                    <element xmi:type="newspaper:Metadata" href="sport.newspaper#//@page.0/@subArea.0/@subArea.0/@article/@metadata"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_enaPsRCoEee-S93KWpRPRg" x="34" y="8"/>
+                  </children>
+                </children>
+                <children xmi:type="notation:BasicCompartment" xmi:id="_rts34hClEee-S93KWpRPRg" type="7011"/>
+                <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_rtsQ0RClEee-S93KWpRPRg"/>
+                <element xmi:type="newspaper:Article" href="sport.newspaper#//@page.0/@subArea.0/@subArea.0/@article"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rtsQ0hClEee-S93KWpRPRg" x="8" width="121" height="117"/>
+              </children>
+            </children>
+            <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_gK1RoRClEee-S93KWpRPRg"/>
+            <element xmi:type="newspaper:ArticleArea" href="sport.newspaper#//@page.0/@subArea.0/@subArea.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gK1RohClEee-S93KWpRPRg" x="8" y="4" width="155" height="197"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_h0mEwBClEee-S93KWpRPRg" type="3002" fontName=".SF NS Text">
+            <children xmi:type="notation:DecorationNode" xmi:id="_h0mEwxClEee-S93KWpRPRg" type="5007"/>
+            <children xmi:type="notation:BasicCompartment" xmi:id="_h0mExBClEee-S93KWpRPRg" type="7003"/>
+            <children xmi:type="notation:BasicCompartment" xmi:id="_h0mExRClEee-S93KWpRPRg" type="7004">
+              <children xmi:type="notation:Shape" xmi:id="_1V9LkBClEee-S93KWpRPRg" type="3008" fontName=".SF NS Text">
+                <children xmi:type="notation:DecorationNode" xmi:id="_1V9yoBClEee-S93KWpRPRg" type="5006"/>
+                <children xmi:type="notation:BasicCompartment" xmi:id="_1V9yoRClEee-S93KWpRPRg" type="7010">
+                  <children xmi:type="notation:Shape" xmi:id="_fGUZQBCoEee-S93KWpRPRg" type="3009" fontName=".SF NS Text">
+                    <element xmi:type="newspaper:Metadata" href="sport.newspaper#//@page.0/@subArea.0/@subArea.1/@article/@metadata"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fGUZQRCoEee-S93KWpRPRg" x="93" y="5"/>
+                  </children>
+                </children>
+                <children xmi:type="notation:BasicCompartment" xmi:id="_1V9yohClEee-S93KWpRPRg" type="7011">
+                  <children xmi:type="notation:Shape" xmi:id="_8d6QQBCmEee-S93KWpRPRg" type="3010" fontName=".SF NS Text">
+                    <children xmi:type="notation:DecorationNode" xmi:id="_8d6QQhCmEee-S93KWpRPRg" type="5005"/>
+                    <element xmi:type="newspaper:Image" href="sport.newspaper#//@page.0/@subArea.0/@subArea.1/@article/@image"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8d6QQRCmEee-S93KWpRPRg" x="22"/>
+                  </children>
+                </children>
+                <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_1V9LkRClEee-S93KWpRPRg"/>
+                <element xmi:type="newspaper:Article" href="sport.newspaper#//@page.0/@subArea.0/@subArea.1/@article"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1V9LkhClEee-S93KWpRPRg" x="6" y="7" width="213" height="177"/>
+              </children>
+            </children>
+            <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_h0mEwRClEee-S93KWpRPRg"/>
+            <element xmi:type="newspaper:ArticleArea" href="sport.newspaper#//@page.0/@subArea.0/@subArea.1"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_h0mEwhClEee-S93KWpRPRg" x="182" y="4" width="245" height="257"/>
+          </children>
+        </children>
+        <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_aZI_0RClEee-S93KWpRPRg"/>
+        <element xmi:type="newspaper:Area" href="sport.newspaper#//@page.0/@subArea.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aZI_0hClEee-S93KWpRPRg" x="6" y="4" width="453" height="309"/>
+      </children>
+    </children>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_48m-oRCkEee-S93KWpRPRg"/>
+    <element xmi:type="newspaper:Page" href="sport.newspaper#//@page.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_48m-ohCkEee-S93KWpRPRg" x="24" y="24" width="493" height="365"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_BX7IoBCmEee-S93KWpRPRg" type="2001" fontName=".SF NS Text">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BX7IoxCmEee-S93KWpRPRg" type="5009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_BX7IpBCmEee-S93KWpRPRg" type="7001">
+      <children xmi:type="notation:Shape" xmi:id="_H7duIBCmEee-S93KWpRPRg" type="3003" fontName=".SF NS Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_H7duIxCmEee-S93KWpRPRg" type="5004"/>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_H7eVMBCmEee-S93KWpRPRg" type="7005"/>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_H7eVMRCmEee-S93KWpRPRg" type="7006">
+          <children xmi:type="notation:Shape" xmi:id="_THapMBCmEee-S93KWpRPRg" type="3005" fontName=".SF NS Text">
+            <children xmi:type="notation:DecorationNode" xmi:id="_THapMxCmEee-S93KWpRPRg" type="5003"/>
+            <children xmi:type="notation:BasicCompartment" xmi:id="_THapNBCmEee-S93KWpRPRg" type="7008">
+              <children xmi:type="notation:Shape" xmi:id="_ky13MBCoEee-S93KWpRPRg" type="3006" fontName=".SF NS Text">
+                <element xmi:type="newspaper:Metadata" href="sport.newspaper#//@page.1/@subArea.0/@ad/@metadata"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ky13MRCoEee-S93KWpRPRg" x="37" y="10"/>
+              </children>
+            </children>
+            <children xmi:type="notation:BasicCompartment" xmi:id="_THapNRCmEee-S93KWpRPRg" type="7009"/>
+            <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_THapMRCmEee-S93KWpRPRg"/>
+            <element xmi:type="newspaper:Ad" href="sport.newspaper#//@page.1/@subArea.0/@ad"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_THapMhCmEee-S93KWpRPRg" x="2" y="5" width="131" height="116"/>
+          </children>
+        </children>
+        <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_H7duIRCmEee-S93KWpRPRg"/>
+        <element xmi:type="newspaper:AdArea" href="sport.newspaper#//@page.1/@subArea.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H7duIhCmEee-S93KWpRPRg" x="14" y="4" width="161" height="189"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_f6wY0BCmEee-S93KWpRPRg" type="3004" fontName=".SF NS Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_f6wY0xCmEee-S93KWpRPRg" type="5001"/>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_f6wY1BCmEee-S93KWpRPRg" type="7007">
+          <children xmi:type="notation:Shape" xmi:id="_vlfzYBCmEee-S93KWpRPRg" type="3002" fontName=".SF NS Text">
+            <children xmi:type="notation:DecorationNode" xmi:id="_vlfzYxCmEee-S93KWpRPRg" type="5007"/>
+            <children xmi:type="notation:BasicCompartment" xmi:id="_vlfzZBCmEee-S93KWpRPRg" type="7003"/>
+            <children xmi:type="notation:BasicCompartment" xmi:id="_vlfzZRCmEee-S93KWpRPRg" type="7004">
+              <children xmi:type="notation:Shape" xmi:id="_zvuYIBCmEee-S93KWpRPRg" type="3008" fontName=".SF NS Text">
+                <children xmi:type="notation:DecorationNode" xmi:id="_zvuYIxCmEee-S93KWpRPRg" type="5006"/>
+                <children xmi:type="notation:BasicCompartment" xmi:id="_zvuYJBCmEee-S93KWpRPRg" type="7010">
+                  <children xmi:type="notation:Shape" xmi:id="_nuM1EBCoEee-S93KWpRPRg" type="3009" fontName=".SF NS Text">
+                    <element xmi:type="newspaper:Metadata" href="sport.newspaper#//@page.1/@subArea.1/@subArea.0/@article/@metadata"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nuM1ERCoEee-S93KWpRPRg" x="44" y="5"/>
+                  </children>
+                </children>
+                <children xmi:type="notation:BasicCompartment" xmi:id="_zvuYJRCmEee-S93KWpRPRg" type="7011"/>
+                <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_zvuYIRCmEee-S93KWpRPRg"/>
+                <element xmi:type="newspaper:Article" href="sport.newspaper#//@page.1/@subArea.1/@subArea.0/@article"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zvuYIhCmEee-S93KWpRPRg" x="17" y="4" width="113" height="111"/>
+              </children>
+            </children>
+            <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_vlfzYRCmEee-S93KWpRPRg"/>
+            <element xmi:type="newspaper:ArticleArea" href="sport.newspaper#//@page.1/@subArea.1/@subArea.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vlfzYhCmEee-S93KWpRPRg" x="21" y="12" width="164" height="197"/>
+          </children>
+        </children>
+        <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_f6wY0RCmEee-S93KWpRPRg"/>
+        <element xmi:type="newspaper:Area" href="sport.newspaper#//@page.1/@subArea.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_f6wY0hCmEee-S93KWpRPRg" x="210" y="8" width="205" height="261"/>
+      </children>
+    </children>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_BX7IoRCmEee-S93KWpRPRg"/>
+    <element xmi:type="newspaper:Page" href="sport.newspaper#//@page.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BX7IohCmEee-S93KWpRPRg" x="596" y="24" width="445" height="349"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_eXCt4BCnEee-S93KWpRPRg" type="2003" fontName=".SF NS Text">
+    <children xmi:type="notation:BasicCompartment" xmi:id="_eXCt4xCnEee-S93KWpRPRg" type="7014">
+      <children xmi:type="notation:Shape" xmi:id="_qSiPgBCnEee-S93KWpRPRg" type="3013" fontName=".SF NS Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_qSiPghCnEee-S93KWpRPRg" type="5012"/>
+        <element xmi:type="newspaper:Topic" href="sport.newspaper#//@data/@topic.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qSiPgRCnEee-S93KWpRPRg" x="110" y="21" width="85" height="37"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_szZpwBCnEee-S93KWpRPRg" type="3013" fontName=".SF NS Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_szZpwhCnEee-S93KWpRPRg" type="5012"/>
+        <element xmi:type="newspaper:Topic" href="sport.newspaper#//@data/@topic.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_szZpwRCnEee-S93KWpRPRg" x="398" y="29"/>
+      </children>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_eXCt5BCnEee-S93KWpRPRg" type="7015">
+      <children xmi:type="notation:Shape" xmi:id="_1q7EEBCnEee-S93KWpRPRg" type="3014" fontName=".SF NS Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_1q7rIBCnEee-S93KWpRPRg" type="5013"/>
+        <element xmi:type="newspaper:Mention" href="sport.newspaper#//@data/@mention.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1q7EERCnEee-S93KWpRPRg" x="306" y="21"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7dnbcBCnEee-S93KWpRPRg" type="3014" fontName=".SF NS Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_7dnbchCnEee-S93KWpRPRg" type="5013"/>
+        <element xmi:type="newspaper:Mention" href="sport.newspaper#//@data/@mention.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7dnbcRCnEee-S93KWpRPRg" x="114" y="10"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_AZYK0BCoEee-S93KWpRPRg" type="3014" fontName=".SF NS Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_AZYK0hCoEee-S93KWpRPRg" type="5013"/>
+        <element xmi:type="newspaper:Mention" href="sport.newspaper#//@data/@mention.2"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AZYK0RCoEee-S93KWpRPRg" x="410" y="25"/>
+      </children>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_eXCt5RCnEee-S93KWpRPRg" type="7016">
+      <children xmi:type="notation:Shape" xmi:id="_N5p48BCoEee-S93KWpRPRg" type="3015" fontName=".SF NS Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_N5p48hCoEee-S93KWpRPRg" type="5014"/>
+        <element xmi:type="newspaper:Location" href="sport.newspaper#//@data/@location.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_N5p48RCoEee-S93KWpRPRg" x="226" y="17"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_PRcyUBCoEee-S93KWpRPRg" type="3015" fontName=".SF NS Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_PRcyUhCoEee-S93KWpRPRg" type="5014"/>
+        <element xmi:type="newspaper:Location" href="sport.newspaper#//@data/@location.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PRcyURCoEee-S93KWpRPRg" x="126" y="18"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_P-YJwBCoEee-S93KWpRPRg" type="3015" fontName=".SF NS Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_P-Yw0BCoEee-S93KWpRPRg" type="5014"/>
+        <element xmi:type="newspaper:Location" href="sport.newspaper#//@data/@location.2"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P-YJwRCoEee-S93KWpRPRg" x="390" y="27"/>
+      </children>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_eXCt5hCnEee-S93KWpRPRg" type="7017">
+      <children xmi:type="notation:Shape" xmi:id="_TfaAgBCoEee-S93KWpRPRg" type="3016" fontName=".SF NS Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_TfaAghCoEee-S93KWpRPRg" type="5015"/>
+        <element xmi:type="newspaper:Tag" href="sport.newspaper#//@data/@tag.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TfaAgRCoEee-S93KWpRPRg" x="170" y="8"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_WRH6MBCoEee-S93KWpRPRg" type="3016" fontName=".SF NS Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_WRH6MhCoEee-S93KWpRPRg" type="5015"/>
+        <element xmi:type="newspaper:Tag" href="sport.newspaper#//@data/@tag.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WRH6MRCoEee-S93KWpRPRg" x="66" y="8"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_YEacwBCoEee-S93KWpRPRg" type="3016" fontName=".SF NS Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_YEacwhCoEee-S93KWpRPRg" type="5015"/>
+        <element xmi:type="newspaper:Tag" href="sport.newspaper#//@data/@tag.2"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YEacwRCoEee-S93KWpRPRg" x="434" y="10"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_ZkH8ABCoEee-S93KWpRPRg" type="3016" fontName=".SF NS Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_ZkH8AhCoEee-S93KWpRPRg" type="5015"/>
+        <element xmi:type="newspaper:Tag" href="sport.newspaper#//@data/@tag.3"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZkH8ARCoEee-S93KWpRPRg" x="298" y="16"/>
+      </children>
+    </children>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_eXCt4RCnEee-S93KWpRPRg"/>
+    <element xmi:type="newspaper:Data" href="sport.newspaper#//@data"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eXCt4hCnEee-S93KWpRPRg" x="12" y="568" width="573" height="341"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_x40ZYBIxEee-S93KWpRPRg" type="2002" fontName=".SF NS Text">
+    <children xmi:type="notation:BasicCompartment" xmi:id="_x40ZYxIxEee-S93KWpRPRg" type="7012">
+      <children xmi:type="notation:Shape" xmi:id="_zdlXwBIxEee-S93KWpRPRg" type="3011" fontName=".SF NS Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_zdlXwhIxEee-S93KWpRPRg" type="5010"/>
+        <element xmi:type="newspaper:ContactPerson" href="sport.newspaper#//@advertisers/@contactPerson.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zdlXwRIxEee-S93KWpRPRg" x="30" y="1"/>
+      </children>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_x40ZZBIxEee-S93KWpRPRg" type="7013">
+      <children xmi:type="notation:Shape" xmi:id="_zJldsBIxEee-S93KWpRPRg" type="3012" fontName=".SF NS Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_zJmEwRIxEee-S93KWpRPRg" type="5011"/>
+        <element xmi:type="newspaper:Brand" href="sport.newspaper#NBA"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zJmEwBIxEee-S93KWpRPRg" x="37" y="13"/>
+      </children>
+    </children>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_x40ZYRIxEee-S93KWpRPRg"/>
+    <element xmi:type="newspaper:Advertisers" href="sport.newspaper#//@advertisers"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_x40ZYhIxEee-S93KWpRPRg" x="488" y="400" width="151" height="150"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_ASakARCkEee-S93KWpRPRg"/>
+  <element xmi:type="newspaper:Newspaper" href="sport.newspaper#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_YWUvMBI0Eee-S93KWpRPRg" type="4006" source="_enaPsBCoEee-S93KWpRPRg" target="_WRH6MBCoEee-S93KWpRPRg">
+    <children xmi:type="notation:DecorationNode" xmi:id="_YWUvMxI0Eee-S93KWpRPRg" type="6006">
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_YWUvNBI0Eee-S93KWpRPRg"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_YWUvNRI0Eee-S93KWpRPRg" y="40"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_YWUvMRI0Eee-S93KWpRPRg" fontName=".SF NS Text"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YWUvMhI0Eee-S93KWpRPRg" points="[-8, 20, 11, -632]$[-136, 353, -117, -299]$[-27, 632, -8, -20]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_aPl98BI0Eee-S93KWpRPRg" type="4006" source="_fGUZQBCoEee-S93KWpRPRg" target="_TfaAgBCoEee-S93KWpRPRg">
+    <children xmi:type="notation:DecorationNode" xmi:id="_aPmlABI0Eee-S93KWpRPRg" type="6006">
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_aPmlARI0Eee-S93KWpRPRg"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_aPmlAhI0Eee-S93KWpRPRg" y="40"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_aPl98RI0Eee-S93KWpRPRg" fontName=".SF NS Text"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_aPl98hI0Eee-S93KWpRPRg" points="[-20, 8, 121, -642]$[-111, 48, 30, -602]$[-140, 630, 1, -20]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_btp3YBI0Eee-S93KWpRPRg" type="4006" source="_nuM1EBCoEee-S93KWpRPRg" target="_ZkH8ABCoEee-S93KWpRPRg">
+    <children xmi:type="notation:DecorationNode" xmi:id="_btp3YxI0Eee-S93KWpRPRg" type="6006">
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_btp3ZBI0Eee-S93KWpRPRg"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_btp3ZRI0Eee-S93KWpRPRg" y="40"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_btp3YRI0Eee-S93KWpRPRg" fontName=".SF NS Text"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_btp3YhI0Eee-S93KWpRPRg" points="[-5, 20, 591, -625]$[-84, 391, 512, -254]$[-464, 583, 132, -62]$[-563, 629, 33, -16]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_dmXFcBI0Eee-S93KWpRPRg" type="4006" source="_nuM1EBCoEee-S93KWpRPRg" target="_YEacwBCoEee-S93KWpRPRg">
+    <children xmi:type="notation:DecorationNode" xmi:id="_dmXsgBI0Eee-S93KWpRPRg" type="6006">
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_dmXsgRI0Eee-S93KWpRPRg"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_dmXsghI0Eee-S93KWpRPRg" y="40"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_dmXFcRI0Eee-S93KWpRPRg" fontName=".SF NS Text"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_dmXFchI0Eee-S93KWpRPRg" points="[-3, 20, 499, -620]$[-52, 411, 450, -229]$[-476, 626, 26, -14]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_j38YQBI0Eee-S93KWpRPRg" type="4005" source="_enaPsBCoEee-S93KWpRPRg" target="_PRcyUBCoEee-S93KWpRPRg">
+    <children xmi:type="notation:DecorationNode" xmi:id="_j38YQxI0Eee-S93KWpRPRg" type="6005">
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_j38_UBI0Eee-S93KWpRPRg"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_j38_URI0Eee-S93KWpRPRg" y="40"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_j38YQRI0Eee-S93KWpRPRg" fontName=".SF NS Text"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_j38YQhI0Eee-S93KWpRPRg" points="[-4, 20, -41, -557]$[-76, 425, -113, -152]$[22, 557, -15, -20]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_k9NXMBI0Eee-S93KWpRPRg" type="4005" source="_fGUZQBCoEee-S93KWpRPRg" target="_N5p48BCoEee-S93KWpRPRg">
+    <children xmi:type="notation:DecorationNode" xmi:id="_k9NXMxI0Eee-S93KWpRPRg" type="6005">
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_k9NXNBI0Eee-S93KWpRPRg"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_k9NXNRI0Eee-S93KWpRPRg" y="40"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_k9NXMRI0Eee-S93KWpRPRg" fontName=".SF NS Text"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_k9NXMhI0Eee-S93KWpRPRg" points="[20, 12, 73, -568]$[77, 48, 130, -532]$[101, 108, 154, -472]$[-47, 560, 6, -20]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_l93i8BI0Eee-S93KWpRPRg" type="4005" source="_nuM1EBCoEee-S93KWpRPRg" target="_P-YJwBCoEee-S93KWpRPRg">
+    <children xmi:type="notation:DecorationNode" xmi:id="_l93i8xI0Eee-S93KWpRPRg" type="6005">
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_l93i9BI0Eee-S93KWpRPRg"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_l93i9RI0Eee-S93KWpRPRg" y="40"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_l93i8RI0Eee-S93KWpRPRg" fontName=".SF NS Text"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_l93i8hI0Eee-S93KWpRPRg" points="[-8, 20, 504, -549]$[-136, 375, 376, -194]$[-488, 556, 24, -13]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_pRP_QBI0Eee-S93KWpRPRg" type="4004" source="_fGUZQBCoEee-S93KWpRPRg" target="_1q7EEBCnEee-S93KWpRPRg">
+    <children xmi:type="notation:DecorationNode" xmi:id="_pRP_QxI0Eee-S93KWpRPRg" type="6004">
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_pRP_RBI0Eee-S93KWpRPRg"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_pRP_RRI0Eee-S93KWpRPRg" y="40"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_pRP_QRI0Eee-S93KWpRPRg" fontName=".SF NS Text"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_pRP_QhI0Eee-S93KWpRPRg" points="[20, 4, 9, -489]$[169, 40, 158, -453]$[17, 473, 6, -20]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_p8cRUBI0Eee-S93KWpRPRg" type="4004" source="_enaPsBCoEee-S93KWpRPRg" target="_7dnbcBCnEee-S93KWpRPRg">
+    <children xmi:type="notation:DecorationNode" xmi:id="_p8cRUxI0Eee-S93KWpRPRg" type="6004">
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_p8cRVBI0Eee-S93KWpRPRg"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_p8cRVRI0Eee-S93KWpRPRg" y="40"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_p8cRURI0Eee-S93KWpRPRg" fontName=".SF NS Text"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_p8cRUhI0Eee-S93KWpRPRg" points="[5, 20, -78, -452]$[92, 357, 9, -115]$[92, 462, 9, -10]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_p8k0MBI0Eee-S93KWpRPRg" id="(0.8529411764705882,0.25)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_qzrbUBI0Eee-S93KWpRPRg" type="4004" source="_nuM1EBCoEee-S93KWpRPRg" target="_AZYK0BCoEee-S93KWpRPRg">
+    <children xmi:type="notation:DecorationNode" xmi:id="_qzrbUxI0Eee-S93KWpRPRg" type="6004">
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_qzrbVBI0Eee-S93KWpRPRg"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_qzrbVRI0Eee-S93KWpRPRg" y="40"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_qzrbURI0Eee-S93KWpRPRg" fontName=".SF NS Text"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qzrbUhI0Eee-S93KWpRPRg" points="[-10, 20, 463, -463]$[-164, 355, 309, -128]$[-430, 465, 43, -18]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_7DyMwBI0Eee-S93KWpRPRg" type="4001" source="_48m-oBCkEee-S93KWpRPRg" target="_qSiPgBCnEee-S93KWpRPRg">
+    <children xmi:type="notation:DecorationNode" xmi:id="_7Dyz0BI0Eee-S93KWpRPRg" type="6001">
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_7Dyz0RI0Eee-S93KWpRPRg"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_7Dyz0hI0Eee-S93KWpRPRg" y="40"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_7DyMwRI0Eee-S93KWpRPRg" fontName=".SF NS Text"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_7DyMwhI0Eee-S93KWpRPRg" points="[0, 2, -16, -229]$[12, 213, -4, -18]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_7D0B8BI0Eee-S93KWpRPRg" id="(0.2718052738336714,0.9945205479452055)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_88mdoBI2Eee-S93KWpRPRg" type="4003" source="_THapMBCmEee-S93KWpRPRg" target="_zdlXwBIxEee-S93KWpRPRg">
+    <children xmi:type="notation:DecorationNode" xmi:id="_88mdoxI2Eee-S93KWpRPRg" type="6003">
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_88mdpBI2Eee-S93KWpRPRg"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_88mdpRI2Eee-S93KWpRPRg" y="40"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_88mdoRI2Eee-S93KWpRPRg" fontName=".SF NS Text"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_88mdohI2Eee-S93KWpRPRg" points="[15, 26, -152, -242]$[161, 248, -6, -20]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_88nrwBI2Eee-S93KWpRPRg" id="(0.48091603053435117,0.7758620689655172)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="___Ld0BI2Eee-S93KWpRPRg" type="4002" source="_THapMBCmEee-S93KWpRPRg" target="_zJldsBIxEee-S93KWpRPRg">
+    <children xmi:type="notation:DecorationNode" xmi:id="___Ld0xI2Eee-S93KWpRPRg" type="6002">
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="___Ld1BI2Eee-S93KWpRPRg"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="___Ld1RI2Eee-S93KWpRPRg" y="40"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="___Ld0RI2Eee-S93KWpRPRg" fontName=".SF NS Text"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="___Ld0hI2Eee-S93KWpRPRg" points="[0, 1, -168, -320]$[165, 341, -3, 20]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="___Mr8BI2Eee-S93KWpRPRg" id="(0.3893129770992366,0.9913793103448276)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_HJUJQBI3Eee-S93KWpRPRg" type="4001" source="_BX7IoBCmEee-S93KWpRPRg" target="_szZpwBCnEee-S93KWpRPRg">
+    <children xmi:type="notation:DecorationNode" xmi:id="_HJUwUBI3Eee-S93KWpRPRg" type="6001">
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_HJUwURI3Eee-S93KWpRPRg"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_HJUwUhI3Eee-S93KWpRPRg" y="40"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_HJUJQRI3Eee-S93KWpRPRg" fontName=".SF NS Text"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HJUJQhI3Eee-S93KWpRPRg" points="[-2, 5, 322, -255]$[-57, 200, 267, -60]$[-286, 251, 38, -9]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HJV-cBI3Eee-S93KWpRPRg" id="(0.36179775280898874,0.9856733524355301)"/>
+  </edges>
+</notation:Diagram>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<newspaper:Newspaper xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:newspaper="http://www.newspaper.org" name="Sport Newspaper">
+  <page xBottomRight="30.0" yBottomRight="60.0" name="FootballPage" pageNumber="1" topic="//@data/@topic.0">
+    <subArea xTopLeft="1.0" yTopLeft="1.0" xBottomRight="29.0" yBottomRight="59.0" name="Container1">
+      <subArea xsi:type="newspaper:ArticleArea" xTopLeft="1.0" yTopLeft="1.0" xBottomRight="10.0" yBottomRight="57.0" name="Berlusconi">
+        <article articleTitle="Silvio Berlusconi has sold A.C. Milan" subtitle="Or maybe not?" text="Chinese paid 100mln but Milan is not their yet">
+          <metadata topic="//@data/@topic.0" mention="//@data/@mention.1" location="//@data/@location.1" tag="//@data/@tag.1"/>
+        </article>
+      </subArea>
+      <subArea xsi:type="newspaper:ArticleArea" xTopLeft="11.0" yTopLeft="2.0" xBottomRight="26.0" yBottomRight="57.0" name="Messi">
+        <article articleTitle="Lionel Messi won the golden ball" subtitle="It is the fourth!" text="Congratulations to Lionel Messi!">
+          <metadata topic="//@data/@topic.0" mention="//@data/@mention.0" location="//@data/@location.0" tag="//@data/@tag.0"/>
+          <image caption="Messi kisses the golden ball " image="01001001"/>
+        </article>
+      </subArea>
+    </subArea>
+  </page>
+  <page xBottomRight="30.0" yBottomRight="60.0" name="BasketballPage" pageNumber="2" topic="//@data/@topic.1">
+    <subArea xsi:type="newspaper:AdArea" xTopLeft="1.0" yTopLeft="1.0" xBottomRight="13.0" yBottomRight="59.0" name="NBA" workingDayCost="7.0" weekendCost="10.0">
+      <ad brand="NBA" contactperson="//@advertisers/@contactPerson.0" adTitle="Playoff are starting!" subtitle="We are waiting for you!" cost="7.0">
+        <metadata topic="//@data/@topic.1"/>
+      </ad>
+    </subArea>
+    <subArea xTopLeft="14.0" yTopLeft="1.0" xBottomRight="29.0" yBottomRight="59.0" name="BasketContainer">
+      <subArea xsi:type="newspaper:ArticleArea" xTopLeft="5.0" yTopLeft="1.0" xBottomRight="14.0" yBottomRight="57.0" name="NBA">
+        <article articleTitle="Kevin Durant is ready!" subtitle="He will return from injury in April" text="He will return versus Jazz">
+          <metadata topic="//@data/@topic.1" mention="//@data/@mention.2" location="//@data/@location.2" tag="//@data/@tag.3 //@data/@tag.2"/>
+        </article>
+      </subArea>
+    </subArea>
+  </page>
+  <advertisers>
+    <contactPerson name="Adam " surname="Silver" email="adamsilver@gmail.com" phone="3232485830"/>
+    <brand name="NBA"/>
+  </advertisers>
+  <data>
+    <topic name="Football"/>
+    <topic name="Basketball"/>
+    <mention name="Lionel" surname="Messi"/>
+    <mention name="Silvio" surname="Berlusconi"/>
+    <mention name="Kevin" surname="Durant"/>
+    <location name="Barcellona"/>
+    <location name="Milano"/>
+    <location name="USA"/>
+    <tag text="#ballondor"/>
+    <tag text="#closing"/>
+    <tag text="#nba"/>
+    <tag text="#basket"/>
+  </data>
+</newspaper:Newspaper>
